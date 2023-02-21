@@ -8,12 +8,21 @@
   --deep-space-sparkle: #4d6a6d;
   --saffron: #e1bc29;
   --off-white: #fffaf1;
+}
 
-  --current-liturgical: #4d2d52; /* english violet */
+.gold {
+  background-color: var(--saffron);
+}
+
+.white {
+  background-color: var(--off-white);
+}
+
+.purple {
+  background-color: var(--english-violet);
 }
 
 body {
-  background-color: var(--current-liturgical);
   margin: 0;
   font-family: 'Lora', 'Garamond', 'Times New Roman', Serif;
   -webkit-font-smoothing: antialiased;
@@ -59,96 +68,16 @@ p {
   text-shadow: 2px 2px hsla(0, 0%, 0%, 0.4);
 }
 
-/* SIDEBAR CSS */
-#sidebar {
-  /* grid-column: span 1; */
-  margin: 0;
-  padding: 0;
-  width: 325px;
-  position: fixed;
-  height: 100%;
-  vertical-align: top;
-  box-shadow: 0 0 6px 0 hsla(0, 0%, 0%, 0.4);
-  text-align: center;
-  background-color: var(--off-white);
+#fast-icons {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
 }
 
-#sidebar h1 {
-  font-weight: 800;
-  font-size: 32pt;
-  text-shadow: 2px 2px hsla(0, 0%, 0%, 0.4);
-  color: #111;
-  padding: 5%;
-}
-
-#sidebar a {
-  text-decoration: none;
-  color: var(--deep-space-sparkle);
-}
-
-#dateText {
-  font-size: 18pt;
-  font-weight: bold;
-}
-
-#dateTitle h2 {
-  font-size: 14pt;
-  font-weight: 550;
+.fast-icon {
+  height: 100px;
   padding: 5px;
-}
-
-.sidebar-link {
-  left: 0;
-  text-align: left;
-  padding: 16px;
-  padding-left: 35px;
-  border-left: 8px solid hsla(0, 0%, 0%, 0);
-}
-
-.sub {
-  width: 80%;
-  float: right;
-}
-
-div.sidebar-link {
-  font-weight: 400;
-  font-size: 22pt;
-  text-decoration: none;
-  color: #444;
-}
-
-div.sub {
-  font-weight: 500;
-  font-size: 16pt;
-  color: #666;
-  height: 30px;
-  padding: 10px;
-}
-
-div.sidebar-link:hover {
-  background-color: hsla(0, 0%, 0%, 0.05);
-  border-left: 8px solid var(--new-york-pink);
-}
-
-.sidebar-current {
-  font-weight: 500;
-  color: #111;
-  background-color: hsla(0, 0%, 0%, 0.1);
-  padding-left: -5px;
-  border-left: 8px solid var(--opal);
-}
-
-.main-body {
-  margin: auto;
-  padding: 30px 65px 30px 65px; /* up right down left */
-  max-width: 700px;
-  background-color: var(--off-white);
-  color: #222;
-  box-shadow: 0 0 3px 0 hsla(0, 0%, 0%, 0.4);
-}
-
-.tooltip {
-  z-index: 1011;
+  flex-grow: 1;
 }
 
 
