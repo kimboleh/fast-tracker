@@ -1,16 +1,21 @@
 {
   "files": {
-    "main.css": "/fast-tracker/static/css/main.0c63b08a.css",
-    "main.js": "/fast-tracker/static/js/main.d5083a71.js",
+    "main.css": "/fast-tracker/static/css/main.73b5cfa5.css",
+    "main.js": "/fast-tracker/static/js/main.7f428842.js",
     "static/js/787.757219be.chunk.js": "/fast-tracker/static/js/787.757219be.chunk.js",
     "service-worker.js": "/fast-tracker/service-worker.js",
+    "static/media/oil.svg": "/fast-tracker/static/media/oil.0135da3f9d8cfcc43a7bcf79e6c17df2.svg",
+    "static/media/meat.svg": "/fast-tracker/static/media/meat.b8a882d8c368e8e955acbba2588a939c.svg",
+    "static/media/dairy.svg": "/fast-tracker/static/media/dairy.e1f4edcc39f2bd959fc3a3309e4233f0.svg",
+    "static/media/fish.svg": "/fast-tracker/static/media/fish.74465c88c32c5be080fc69053e242f04.svg",
     "index.html": "/fast-tracker/index.html",
-    "main.0c63b08a.css.map": "/fast-tracker/static/css/main.0c63b08a.css.map",
-    "main.d5083a71.js.map": "/fast-tracker/static/js/main.d5083a71.js.map",
+    "static/media/alcohol.svg": "/fast-tracker/static/media/alcohol.1c19c90c3225cdaa330c834f5b5c61d9.svg",
+    "main.73b5cfa5.css.map": "/fast-tracker/static/css/main.73b5cfa5.css.map",
+    "main.7f428842.js.map": "/fast-tracker/static/js/main.7f428842.js.map",
     "787.757219be.chunk.js.map": "/fast-tracker/static/js/787.757219be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c63b08a.css",
-    "static/js/main.d5083a71.js"
+    "static/css/main.73b5cfa5.css",
+    "static/js/main.7f428842.js"
   ]
 }
