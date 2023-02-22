@@ -8,14 +8,21 @@
     vertical-align: top;
     box-shadow: 0 0 6px 0 hsla(0, 0%, 0%, 0.4);
     text-align: center;
+  }
+
+  .light {
     background-color: var(--off-white);
+  }
+
+  .dark {
+    background-color: var(--dark);
+    color: var(--off-white);
   }
   
   #title {
-    font-weight: 800;
+    font-weight: 400;
     font-size: 32pt;
-    text-shadow: 2px 2px hsla(0, 0%, 0%, 0.4);
-    color: #111;
+    letter-spacing: 0.01em;
     padding: 5%;
   }
   
@@ -26,7 +33,7 @@
   
   #dateText {
     font-size: 18pt;
-    font-weight: bold;
+    font-weight: 200;
   }
   
   .sidebar-link {
@@ -70,12 +77,10 @@
     border-left: 8px solid var(--opal);
   }
   
-  .main-body {
+  #text-body {
     margin: auto;
     padding: 30px 65px 30px 65px; /* up right down left */
     max-width: 700px;
-    background-color: var(--off-white);
-    color: #222;
     box-shadow: 0 0 3px 0 hsla(0, 0%, 0%, 0.4);
   }
   

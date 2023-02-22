@@ -50,9 +50,6 @@ class App extends React.Component {
   setColor(pascha_distance) {
     const body = document.getElementsByTagName('body')[0];
 
-    /* gold - default */
-    body.className = 'gold';
-
     /* blue - Marian feasts, Presentation, Annunciation, & Akathist */
 
     /* red - feasts commemorating the cross, Apostles' Fast & Feast, Advent fast,
@@ -72,6 +69,12 @@ class App extends React.Component {
     /* white - Epiphany, Transfiguration, & Pascha */
     else if (pascha_distance === 0) {
       body.className = 'white';
+      document.getElementById('sidebar').className = 'dark';
+      document.getElementById('text-body').className = 'dark';
+    }
+    /* gold - default */
+    else {
+      body.className = 'gold';
     }
   }
 

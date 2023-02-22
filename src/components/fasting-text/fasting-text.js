@@ -31,9 +31,12 @@ export class FastingText extends React.Component {
   render() {
     return (
       <div id="main-content">
-        <div id='fasting' className='main-body'>
-          <h1>What can Austin & Kimberly eat?</h1>
-          <div id="fast-icons">
+        <div id='text-body' className='light'>
+          <div id="titles">
+            <h1>OCA Fast Tracker</h1>
+            <h2>What's on the table?</h2>
+          </div>
+          <div id="fast-icons" className='light'>
             <img src={meat} id="meat" className="fast-icon" alt={this.meatStr}></img>
             <img src={dairy} id="dairy" className="fast-icon" alt={this.dairyStr}></img>
             <img src={fish} id="fish" className="fast-icon" alt={this.fishStr}></img>

@@ -2,16 +2,21 @@
 
 :root {
   /* CSS HEX */
-  --opal: #a7c5c1;
-  --new-york-pink: #cd8987;
-  --english-violet: #4d2d52;
-  --deep-space-sparkle: #4d6a6d;
-  --saffron: #e1bc29;
-  --off-white: #fffaf1;
+  --redwood: #AF5D63; /* pink */
+  --english-violet: #4d2d52; /* purple */
+  --air-force-blue: #698996; /* blue */
+  --saffron: #e1bc29; /* gold */
+  --off-white: #fffaf1; /* white */
+  --british-racing-green: #034732; /* green */
+  --dark: #230C0F; /* black */
 }
 
 .gold {
   background-color: var(--saffron);
+}
+
+.green {
+  background-color: var(--british-racing-green);
 }
 
 .white {
@@ -20,6 +25,14 @@
 
 .purple {
   background-color: var(--english-violet);
+}
+
+.blue {
+  background-color: var(--air-force-blue);
+}
+
+.pink {
+  background-color: var(--redwood);
 }
 
 body {
@@ -59,13 +72,24 @@ p {
   display: none;
 }
 
-#fasting {
-  font-size: 14pt;
+#titles {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#fasting h1 {
-  font-weight: 600;
-  text-shadow: 2px 2px hsla(0, 0%, 0%, 0.4);
+#titles h1 {
+  font-weight: 400;
+  font-size: 40pt;
+  margin: 0;
+}
+
+#titles h2 {
+  font-weight: 200;
+  font-size: 20pt;
+  margin-top: 0;
 }
 
 #fast-icons {
@@ -73,6 +97,7 @@ p {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .fast-icon {
