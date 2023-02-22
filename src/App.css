@@ -71,24 +71,23 @@ p {
 #fast-icons {
   width: 100%;
   display: inline-flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .fast-icon {
-  height: 100px;
+  max-height: 100px;
   padding: 5px;
   flex-grow: 1;
+}
+
+.fasted {
+  opacity: 25%;
 }
 
 
 /* MOBILE */
 @media screen and (max-width: 800px) {
-  #sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-
   #main-content {
     margin-left: 0;
   }

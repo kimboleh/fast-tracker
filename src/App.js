@@ -10,8 +10,7 @@ class App extends React.Component {
       dateString: '',
       isDataLoaded: false,
       fastJSON: {},
-      fast: '',
-      fastDetails: '',
+      fasts: [],
       title: ''
     };
     this.months = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
@@ -31,10 +30,9 @@ class App extends React.Component {
     console.log(this.state.fastJSON);
 
     if(this.state.isDataLoaded){
-      this.setColor(this.state.fastJSON);
+      this.setColor(this.state.fastJSON.pascha_distance);
       this.setDate(this.today, this.state.fastJSON);
       this.setFast();
-      this.setFastDetails();
     }
   }
 
@@ -49,7 +47,7 @@ class App extends React.Component {
     }
   }
 
-  setColor(json) {
+  setColor(pascha_distance) {
     const body = document.getElementsByTagName('body')[0];
 
     /* gold - default */
@@ -59,54 +57,52 @@ class App extends React.Component {
 
     /* red - feasts commemorating the cross, Apostles' Fast & Feast, Advent fast,
      * feast days for holy martyrs, and Great & Holy Thursday */
-
+    if (pascha_distance === -3) {
+      this.pascha_distance = 'red';
+    }
     /* green - Pentecost, Palm Sunday, & days commemmorating angels, prophets,
      * monastic saints, ascetics, & fools for Christ */
-
+    else if (pascha_distance === -7 || pascha_distance === 49) {
+      body.className = 'green';
+    }
     /* black/purple - Lent */
-    if (json.pascha_distance >= -40 && json.pascha_distance < 0) {
+    else if (pascha_distance >= -48 && pascha_distance < 0) {
       body.className = 'purple';
     }
-
     /* white - Epiphany, Transfiguration, & Pascha */
-    if (json.pascha_distance === 0) {
+    else if (pascha_distance === 0) {
       body.className = 'white';
     }
   }
 
   setFast() {
-    let apiDay = this.state.fastJSON;
+    let fastLevel = this.state.fastJSON.fast_level;
+    let fastException = this.state.fastJSON.fast_exception;
 
-    if (apiDay.fast_level_desc === "Fast" && (apiDay.weekday === 5 || apiDay.weekday === 3)) {
-      this.setState({fast: "regular Wednesday & Friday fasting"});
-    } else if (apiDay.titles[0].includes("Cheesefare")) {
-      this.setState({
-        fast: "week of Cheesefare",
-        fastDetails: "no red & white meat. Since it's only a Meat Fast, fish, dairy, and alcohol are fine"});
-    } else {
-      this.setState({fast: apiDay.fast_level_desc});
-    }
-  }
-
-  setFastDetails() {
-    let apiDay = this.state.fastJSON;
-    let fast = this.state.fast;
-
-    if (fast !== "week of Cheesefare" &&
-        (fast === "Lenten Fast" || fast === "Nativity Fast" || apiDay.fast_level_desc === "Fast")) {
-          this.setState({fastDetails: "which means no meat, no dairy, and no alcohol"});
-    }
-
-    // exceptions
-    switch (apiDay.fast_exception) {
-      case 2:
-        this.setState({fastDetails: "but today is a Fish Day, so only red & white meat and dairy are off-limits"});
-        break;
-      case 7:
-        this.setState({fastDetails: "but today is only a Meat Fast, so only red & white meats are off-limits"});
-        break;
-      default: break;
-
+    if (fastLevel !== 0) {
+      switch (fastException) {
+        case 10:
+        case 9:
+        case 8: // 8 is "Strict Fast (Wine & Oil), 9 is "Strict Fast", 10 is "No overrides"
+          this.setState({fasts: ['meat','dairy', 'fish', 'alcohol', 'oil']});
+          break;
+        case 7: // Cheesefare
+          this.setState({fasts: ['meat']});
+          break;
+        case 5: // Wine allowed
+          this.setState({fasts: ['meat', 'dairy', 'fish', 'oil']});
+          break;
+        case 4:
+        case 2: // Fish, oil, & wine allowed
+          this.setState({fasts: ['meat', 'dairy']});
+          break;
+        case 3:
+        case 1: // Wine & oil allowed
+          this.setState({fasts: ['meat', 'dairy', 'fish']});
+          break;
+        default:
+          break;
+      }
     }
   }
 
@@ -114,7 +110,7 @@ class App extends React.Component {
     return (
       <div id="app" className="App">
         <Sidebar title={this.state.title} dateText={this.state.dateString}></Sidebar>
-        <FastingText fast={this.state.fast} fastDetails={this.state.fastDetails} />
+        <FastingText fasts={this.state.fasts} fastDetails={this.state.fastDetails} />
       </div>
     );
   }
