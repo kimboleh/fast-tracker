@@ -82,3 +82,12 @@
   .tooltip {
     z-index: 1011;
   }
+
+  @media screen and (max-width: 800px) {
+    #sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding-bottom: 5%;
+    }
+  }
