@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import {FastingText} from './components/fasting-text/fasting-text.js';
-import {Sidebar} from './components/sidebar/sidebar.js';
+import { FastingText } from './components/fasting-text/fasting-text.js';
+import { Sidebar } from './components/sidebar/sidebar.js';
+import about from './components/fast-icons/qmark.svg';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class App extends React.Component {
       isDataLoaded: false,
       fastJSON: {},
       fasts: [],
+      fastDescripton: '',
       title: ''
     };
     this.months = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
@@ -87,21 +89,22 @@ class App extends React.Component {
         case 10:
         case 9:
         case 8: // 8 is "Strict Fast (Wine & Oil), 9 is "Strict Fast", 10 is "No overrides"
-          this.setState({fasts: ['meat','dairy', 'fish', 'alcohol', 'oil']});
+          this.setState({fasts: ['meat','dairy', 'fish', 'alcohol', 'oil'],
+            fastDescripton: 'Today is a strict fast: no meat, dairy, fish, wine, or oil.'});
           break;
         case 7: // Cheesefare
-          this.setState({fasts: ['meat']});
+          this.setState({fasts: ['meat'], fastDescripton: 'For the week of Cheesefare, the fast only includes meat.'});
           break;
         case 5: // Wine allowed
-          this.setState({fasts: ['meat', 'dairy', 'fish', 'oil']});
+          this.setState({fasts: ['meat', 'dairy', 'fish', 'oil'], fastDescripton: 'Wine is permitted, but the fast includes meat, dairy, fish, and oil.'});
           break;
         case 4:
         case 2: // Fish, oil, & wine allowed
-          this.setState({fasts: ['meat', 'dairy']});
+          this.setState({fasts: ['meat', 'dairy'], fastDescripton: 'Today is a fish day, so the fast only includes meat and dairy.'});
           break;
         case 3:
         case 1: // Wine & oil allowed
-          this.setState({fasts: ['meat', 'dairy', 'fish']});
+          this.setState({fasts: ['meat', 'dairy', 'fish'], fastDescripton: 'Wine and oil are permitted, but the fast includes meat, dairy, and fish.'});
           break;
         default:
           break;
@@ -113,7 +116,8 @@ class App extends React.Component {
     return (
       <div id="app" className="App">
         <Sidebar title={this.state.title} dateText={this.state.dateString}></Sidebar>
-        <FastingText fasts={this.state.fasts} fastDetails={this.state.fastDetails} />
+        <FastingText fasts={this.state.fasts} fastDesc={this.state.fastDescripton} />
+        <img src={about} id="about" alt="about" title="About"></img>
       </div>
     );
   }

@@ -43,6 +43,7 @@ export class FastingText extends React.Component {
             <img src={alcohol} id="alcohol" className="fast-icon" alt={this.alcStr}></img>
             <img src={oil} id="oil" className="fast-icon" alt={this.oilStr}></img>
           </div>
+          <div id="fast-description">{this.props.fastDesc}</div>
         </div>
       </div>
     );
