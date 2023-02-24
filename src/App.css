@@ -35,6 +35,10 @@
   background-color: var(--redwood);
 }
 
+.red {
+  background-color: red;
+}
+
 body {
   margin: 0;
   font-family: 'Lora', 'Garamond', 'Times New Roman', Serif;
@@ -70,6 +74,13 @@ p {
 
 #main-content::-webkit-scrollbar {
   display: none;
+}
+
+#text-body {
+  margin: auto;
+  padding: 30px 65px 30px 65px; /* up right down left */
+  max-width: 75%;
+  box-shadow: 0 0 3px 0 hsla(0, 0%, 0%, 0.4);
 }
 
 #titles {

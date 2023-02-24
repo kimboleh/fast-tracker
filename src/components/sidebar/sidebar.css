@@ -76,13 +76,6 @@
     padding-left: -5px;
     border-left: 8px solid var(--opal);
   }
-  
-  #text-body {
-    margin: auto;
-    padding: 30px 65px 30px 65px; /* up right down left */
-    max-width: 700px;
-    box-shadow: 0 0 3px 0 hsla(0, 0%, 0%, 0.4);
-  }
 
   #list-title {
     margin-top: 70px;

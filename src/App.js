@@ -21,7 +21,7 @@ class App extends React.Component {
   }
 
   async componentDidMount() {
-    await fetch("https://orthocal.info/api/oca/")
+    await fetch("https://orthocal.info/api/gregorian/")
     .then((res) => res.json())
     .then((json) => {
       this.setState({
@@ -57,7 +57,7 @@ class App extends React.Component {
     /* red - feasts commemorating the cross, Apostles' Fast & Feast, Advent fast,
      * feast days for holy martyrs, and Great & Holy Thursday */
     if (pascha_distance === -3) {
-      this.pascha_distance = 'red';
+      body.className = 'red';
     }
     /* green - Pentecost, Palm Sunday, & days commemmorating angels, prophets,
      * monastic saints, ascetics, & fools for Christ */
