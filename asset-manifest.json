@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/fast-tracker/static/css/main.653e20c2.css",
-    "main.js": "/fast-tracker/static/js/main.23191cd9.js",
+    "main.css": "/fast-tracker/static/css/main.dfaf8b10.css",
+    "main.js": "/fast-tracker/static/js/main.5b851cb5.js",
     "static/js/787.757219be.chunk.js": "/fast-tracker/static/js/787.757219be.chunk.js",
     "service-worker.js": "/fast-tracker/service-worker.js",
     "static/media/oil.svg": "/fast-tracker/static/media/oil.0135da3f9d8cfcc43a7bcf79e6c17df2.svg",
@@ -11,12 +11,12 @@
     "index.html": "/fast-tracker/index.html",
     "static/media/qmark.svg": "/fast-tracker/static/media/qmark.2fc571c3f2d5ecee5a58259997fdf35a.svg",
     "static/media/alcohol.svg": "/fast-tracker/static/media/alcohol.1c19c90c3225cdaa330c834f5b5c61d9.svg",
-    "main.653e20c2.css.map": "/fast-tracker/static/css/main.653e20c2.css.map",
-    "main.23191cd9.js.map": "/fast-tracker/static/js/main.23191cd9.js.map",
+    "main.dfaf8b10.css.map": "/fast-tracker/static/css/main.dfaf8b10.css.map",
+    "main.5b851cb5.js.map": "/fast-tracker/static/js/main.5b851cb5.js.map",
     "787.757219be.chunk.js.map": "/fast-tracker/static/js/787.757219be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.653e20c2.css",
-    "static/js/main.23191cd9.js"
+    "static/css/main.dfaf8b10.css",
+    "static/js/main.5b851cb5.js"
   ]
 }
