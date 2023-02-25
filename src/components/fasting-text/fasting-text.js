@@ -8,23 +8,17 @@ import oil from '../fast-icons/oil.svg';
 export class FastingText extends React.Component {
   constructor(props) {
     super(props);
-    this.meatStr = '';
-    this.dairyStr = '';
-    this.fishStr = '';
-    this.alcStr = '';
-    this.oilStr = '';
+    this.meatStr = 'meat is allowed';
+    this.dairyStr = 'dairy is allowed';
+    this.fishStr = 'fish is allowed';
+    this.alcStr = 'alcohol is allowed';
+    this.oilStr = 'oil is allowed';
   }
 
   componentDidUpdate() {
-    // set strings according to fast prop
-    this.meatStr = this.props.fasts.includes('meat') ? 'Meat is not allowed' : 'Meat is allowed';
-    this.dairyStr = this.props.fasts.includes('dairy') ? 'Dairy is not allowed' : 'Dairy is allowed';
-    this.fishStr = this.props.fasts.includes('fish') ? 'Fish is not allowed' : 'Fish is allowed';
-    this.alcStr = this.props.fasts.includes('alcohol') ? 'Alcohol is not allowed' : 'Alcohol is allowed';
-    this.oilStr = this.props.fasts.includes('oil') ? 'Oil is not allowed' : 'Oil is allowed';
-
     this.props.fasts.forEach(fast => {
       document.getElementById(fast).className += " fasted";
+      document.getElementById(fast).alt = fast + " is not allowed";
     });
   }
 
