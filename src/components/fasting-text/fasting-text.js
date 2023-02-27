@@ -27,8 +27,8 @@ export class FastingText extends React.Component {
       <div id="main-content">
         <div id='text-body' className='light'>
           <div id="titles">
-            <h1>OCA Fast Tracker</h1>
-            <h2>What's on the table?</h2>
+            <h1>Meat & Right</h1>
+            <h2>An OCA Fasting Tracker</h2>
           </div>
           <div id="fast-icons" className='light'>
             <img src={meat} id="meat" className="fast-icon" alt={this.meatStr}></img>
