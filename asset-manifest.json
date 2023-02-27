@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.dfaf8b10.css",
-    "main.js": "/static/js/main.012f47bd.js",
-    "static/js/787.757219be.chunk.js": "/static/js/787.757219be.chunk.js",
-    "service-worker.js": "/service-worker.js",
-    "static/media/oil.svg": "/static/media/oil.0135da3f9d8cfcc43a7bcf79e6c17df2.svg",
-    "static/media/meat.svg": "/static/media/meat.b8a882d8c368e8e955acbba2588a939c.svg",
-    "static/media/dairy.svg": "/static/media/dairy.e1f4edcc39f2bd959fc3a3309e4233f0.svg",
-    "static/media/fish.svg": "/static/media/fish.74465c88c32c5be080fc69053e242f04.svg",
-    "index.html": "/index.html",
-    "static/media/qmark.svg": "/static/media/qmark.2fc571c3f2d5ecee5a58259997fdf35a.svg",
-    "static/media/alcohol.svg": "/static/media/alcohol.1c19c90c3225cdaa330c834f5b5c61d9.svg",
-    "main.dfaf8b10.css.map": "/static/css/main.dfaf8b10.css.map",
-    "main.012f47bd.js.map": "/static/js/main.012f47bd.js.map",
-    "787.757219be.chunk.js.map": "/static/js/787.757219be.chunk.js.map"
+    "main.css": "/www.meatandright.com/static/css/main.dfaf8b10.css",
+    "main.js": "/www.meatandright.com/static/js/main.f8efc1c7.js",
+    "static/js/787.757219be.chunk.js": "/www.meatandright.com/static/js/787.757219be.chunk.js",
+    "service-worker.js": "/www.meatandright.com/service-worker.js",
+    "static/media/oil.svg": "/www.meatandright.com/static/media/oil.0135da3f9d8cfcc43a7bcf79e6c17df2.svg",
+    "static/media/meat.svg": "/www.meatandright.com/static/media/meat.b8a882d8c368e8e955acbba2588a939c.svg",
+    "static/media/dairy.svg": "/www.meatandright.com/static/media/dairy.e1f4edcc39f2bd959fc3a3309e4233f0.svg",
+    "static/media/fish.svg": "/www.meatandright.com/static/media/fish.74465c88c32c5be080fc69053e242f04.svg",
+    "index.html": "/www.meatandright.com/index.html",
+    "static/media/qmark.svg": "/www.meatandright.com/static/media/qmark.2fc571c3f2d5ecee5a58259997fdf35a.svg",
+    "static/media/alcohol.svg": "/www.meatandright.com/static/media/alcohol.1c19c90c3225cdaa330c834f5b5c61d9.svg",
+    "main.dfaf8b10.css.map": "/www.meatandright.com/static/css/main.dfaf8b10.css.map",
+    "main.f8efc1c7.js.map": "/www.meatandright.com/static/js/main.f8efc1c7.js.map",
+    "787.757219be.chunk.js.map": "/www.meatandright.com/static/js/787.757219be.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dfaf8b10.css",
-    "static/js/main.012f47bd.js"
+    "static/js/main.f8efc1c7.js"
   ]
 }
