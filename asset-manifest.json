@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/fast-tracker/static/css/main.dfaf8b10.css",
-    "main.js": "/fast-tracker/static/js/main.c7c5e452.js",
-    "static/js/787.757219be.chunk.js": "/fast-tracker/static/js/787.757219be.chunk.js",
-    "service-worker.js": "/fast-tracker/service-worker.js",
-    "static/media/oil.svg": "/fast-tracker/static/media/oil.0135da3f9d8cfcc43a7bcf79e6c17df2.svg",
-    "static/media/meat.svg": "/fast-tracker/static/media/meat.b8a882d8c368e8e955acbba2588a939c.svg",
-    "static/media/dairy.svg": "/fast-tracker/static/media/dairy.e1f4edcc39f2bd959fc3a3309e4233f0.svg",
-    "static/media/fish.svg": "/fast-tracker/static/media/fish.74465c88c32c5be080fc69053e242f04.svg",
-    "index.html": "/fast-tracker/index.html",
-    "static/media/qmark.svg": "/fast-tracker/static/media/qmark.2fc571c3f2d5ecee5a58259997fdf35a.svg",
-    "static/media/alcohol.svg": "/fast-tracker/static/media/alcohol.1c19c90c3225cdaa330c834f5b5c61d9.svg",
-    "main.dfaf8b10.css.map": "/fast-tracker/static/css/main.dfaf8b10.css.map",
-    "main.c7c5e452.js.map": "/fast-tracker/static/js/main.c7c5e452.js.map",
-    "787.757219be.chunk.js.map": "/fast-tracker/static/js/787.757219be.chunk.js.map"
+    "main.css": "/static/css/main.dfaf8b10.css",
+    "main.js": "/static/js/main.012f47bd.js",
+    "static/js/787.757219be.chunk.js": "/static/js/787.757219be.chunk.js",
+    "service-worker.js": "/service-worker.js",
+    "static/media/oil.svg": "/static/media/oil.0135da3f9d8cfcc43a7bcf79e6c17df2.svg",
+    "static/media/meat.svg": "/static/media/meat.b8a882d8c368e8e955acbba2588a939c.svg",
+    "static/media/dairy.svg": "/static/media/dairy.e1f4edcc39f2bd959fc3a3309e4233f0.svg",
+    "static/media/fish.svg": "/static/media/fish.74465c88c32c5be080fc69053e242f04.svg",
+    "index.html": "/index.html",
+    "static/media/qmark.svg": "/static/media/qmark.2fc571c3f2d5ecee5a58259997fdf35a.svg",
+    "static/media/alcohol.svg": "/static/media/alcohol.1c19c90c3225cdaa330c834f5b5c61d9.svg",
+    "main.dfaf8b10.css.map": "/static/css/main.dfaf8b10.css.map",
+    "main.012f47bd.js.map": "/static/js/main.012f47bd.js.map",
+    "787.757219be.chunk.js.map": "/static/js/787.757219be.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dfaf8b10.css",
-    "static/js/main.c7c5e452.js"
+    "static/js/main.012f47bd.js"
   ]
 }
