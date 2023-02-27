@@ -15,13 +15,23 @@ class App extends React.Component {
       fastDescripton: '',
       title: ''
     };
+    this.nextDay = this.nextDay.bind(this);
+    this.previousDay = this.previousDay.bind(this);
+
     this.months = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
     "October", "November", "December"];
-    this.today = new Date();
+    this.selectedDate = new Date();
   }
 
   async componentDidMount() {
-    await fetch("https://orthocal.info/api/gregorian/")
+    await this.fetchDateJSON();
+    this.setNewData();
+  }
+
+  async fetchDateJSON() {
+    this.setState({ isDataLoaded: false });
+
+    await fetch("https://orthocal.info/api/gregorian/" + this.selectedDate.getFullYear() + "/" + (this.selectedDate.getMonth() + 1) + "/" + this.selectedDate.getDate())
     .then((res) => res.json())
     .then((json) => {
       this.setState({
@@ -30,15 +40,17 @@ class App extends React.Component {
     })
 
     console.log(this.state.fastJSON);
+  }
 
-    if(this.state.isDataLoaded){
+  setNewData() {
+    if (this.state.isDataLoaded){
       this.setColor(this.state.fastJSON.pascha_distance);
-      this.setDate(this.today, this.state.fastJSON);
+      this.setDateAndTitleStrings(this.selectedDate, this.state.fastJSON);
       this.setFast();
     }
   }
 
-  setDate(dateObject, json) {
+  setDateAndTitleStrings(dateObject, json) {
     var year = dateObject.getFullYear();
     var month = dateObject.getMonth();
     var numericalDay = dateObject.getDate();
@@ -86,6 +98,7 @@ class App extends React.Component {
 
     if (fastLevel !== 0) {
       switch (fastException) {
+        case 0:
         case 10:
         case 9:
         case 8: // 8 is "Strict Fast (Wine & Oil), 9 is "Strict Fast", 10 is "No overrides"
@@ -109,13 +122,32 @@ class App extends React.Component {
         default:
           break;
       }
+    } else {
+      this.setState({fasts: [], fastDescripton: "No fast today!"});
     }
+  }
+
+  async nextDay() {
+    this.selectedDate.setDate(this.selectedDate.getDate() + 1);
+    await this.fetchDateJSON();
+    this.setNewData();
+  }
+
+  async previousDay() {
+    this.selectedDate.setDate(this.selectedDate.getDate() - 1);
+    await this.fetchDateJSON();
+    this.setNewData();
   }
 
   render() {
     return (
       <div id="app" className="App">
-        <Sidebar title={this.state.title} dateText={this.state.dateString}></Sidebar>
+        <Sidebar 
+          title={this.state.title} 
+          dateText={this.state.dateString} 
+          nextDay={this.nextDay} 
+          previousDay={this.previousDay}>
+        </Sidebar>
         <FastingText fasts={this.state.fasts} fastDesc={this.state.fastDescripton} />
         <img src={about} id="about" alt="about" title="About"></img>
       </div>

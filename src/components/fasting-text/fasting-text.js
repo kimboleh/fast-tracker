@@ -19,7 +19,6 @@ export class FastingText extends React.Component {
   componentDidUpdate() {
     this.possibleFasts.forEach(fast => {
       if (this.props.fasts.includes(fast)) {
-        console.log(fast);
         document.getElementById(fast).className += " fasted";
         document.getElementById(fast).alt = fast + " is not allowed";
       } else {

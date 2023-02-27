@@ -3,11 +3,16 @@ import './sidebar.css';
 
 export class Sidebar extends React.Component {
 
+    // <button onClick={this.props.previousDay}>previous</button>
+    // <button onClick={this.props.nextDay}>next</button>
+
   render() {
     return (
         <div id="sidebar" className='light'>
             <div id="title">{this.props.title}</div>
             <div id="dateText">{this.props.dateText}</div>
+            <div id="next-previous-buttons">
+            </div>
             <div id="list-title">Coming soon:</div>
             <div id="list">
                 <ul>
