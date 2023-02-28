@@ -1,0 +1,18 @@
+a {
+    text-decoration: underline;
+    color: var(--air-force-blue);
+  }
+
+  a:visited {
+    color: (--english-violet);
+  }
+
+#about-text {
+    font-size: 16pt;
+    margin: 40px;
+  }
+
+.subheader {
+    font-weight: 400;
+    font-size: 18pt;
+}
