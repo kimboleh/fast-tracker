@@ -17,11 +17,17 @@ export class Sidebar extends React.Component {
                     <img src={arrow} id="next-arrow" alt="next day"></img>
                 </button>
             </div>
+
+            <div id="links">
+                <div id="fast-tracker-link" className='sidebar-link sidebar-current' onClick={this.props.openTracker}>Fasting Tracker</div>
+                <div id="about-link" className='sidebar-link' onClick={this.props.openAbout}>About</div>
+                <div id="faq-link" className='sidebar-link' onClick={this.props.openFAQ}>FAQ</div>
+            </div>
+
             <div id="list-title">Coming soon:</div>
             <div id="list">
                 <ul>
                     <li>Monthly calendar view</li>
-                    <li>About page & FAQ</li>
                 </ul>
             </div>
         </div>

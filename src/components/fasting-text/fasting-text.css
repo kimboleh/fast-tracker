@@ -1,0 +1,33 @@
+#fast-icons {
+  align-items: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.fast-icon {
+  max-height: 100px;
+  padding: 5px;
+  flex-grow: 1;
+}
+
+.fasted {
+  opacity: 25%;
+}
+
+#fish {
+  max-height: 120px;
+}
+
+#fast-description {
+  font-size: 14pt;
+  margin: 40px;
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}

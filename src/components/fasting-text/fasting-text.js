@@ -1,4 +1,5 @@
 import React from 'react';
+import './fasting-text.css';
 import meat from '../fast-icons/meat.svg';
 import dairy from '../fast-icons/dairy.svg';
 import fish from '../fast-icons/fish.svg';
@@ -30,7 +31,7 @@ export class FastingText extends React.Component {
 
   render() {
     return (
-      <div id="main-content">
+      <div id="fast-tracker" className="main-content">
         <div id='text-body' className='light'>
           <div id="titles">
             <h1>Meat & Right</h1>

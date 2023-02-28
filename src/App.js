@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import { FastingText } from './components/fasting-text/fasting-text.js';
 import { Sidebar } from './components/sidebar/sidebar.js';
-import about from './components/fast-icons/qmark.svg';
+import { About } from './components/about/about.js';
+import { FAQ } from './components/faq/faq.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -131,12 +132,50 @@ class App extends React.Component {
     this.selectedDate.setDate(this.selectedDate.getDate() + 1);
     await this.fetchDateJSON();
     this.setNewData();
+    this.openTracker();
   }
 
   async previousDay() {
     this.selectedDate.setDate(this.selectedDate.getDate() - 1);
     await this.fetchDateJSON();
     this.setNewData();
+    this.openTracker();
+  }
+
+  openAbout() {
+    // hide FastTracker and FAQ content
+    document.getElementById("fast-tracker").style.display = "none";
+    document.getElementById("fast-tracker-link").className = "sidebar-link";
+    document.getElementById("faq-page").style.display = "none";
+    document.getElementById("faq-link").className = "sidebar-link";
+
+    // show about
+    document.getElementById("about-page").style.display = "block";
+    document.getElementById("about-link").className += " sidebar-current";
+  }
+
+  openFAQ() {
+    // hide FastTracker and About content
+    document.getElementById("fast-tracker").style.display = "none";
+    document.getElementById("fast-tracker-link").className = "sidebar-link";
+    document.getElementById("about-page").style.display = "none";
+    document.getElementById("about-link").className = "sidebar-link";
+
+    // show FAQ
+    document.getElementById("faq-page").style.display = "block";
+    document.getElementById("faq-link").className += " sidebar-current";
+  }
+
+  openTracker() {
+    // hide About and FAQ content
+    document.getElementById("about-page").style.display = "none";
+    document.getElementById("about-link").className = "sidebar-link";
+    document.getElementById("faq-page").style.display = "none";
+    document.getElementById("faq-link").className = "sidebar-link";
+
+    // show fast tracker
+    document.getElementById("fast-tracker").style.display = "block";
+    document.getElementById("fast-tracker-link").className += " sidebar-current";
   }
 
   render() {
@@ -146,10 +185,14 @@ class App extends React.Component {
           title={this.state.title} 
           dateText={this.state.dateString} 
           nextDay={this.nextDay} 
-          previousDay={this.previousDay}>
+          previousDay={this.previousDay}
+          openTracker={this.openTracker}
+          openAbout={this.openAbout}
+          openFAQ={this.openFAQ}>
         </Sidebar>
         <FastingText fasts={this.state.fasts} fastDesc={this.state.fastDescripton} />
-        <img src={about} id="about" alt="about" title="About"></img>
+        <About />
+        <FAQ />
       </div>
     );
   }
