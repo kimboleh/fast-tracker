@@ -1,6 +1,7 @@
 import React from 'react';
 import './sidebar.css';
 import arrow from '../fast-icons/arrow.svg';
+import circle from '../fast-icons/circle.svg';
 
 export class Sidebar extends React.Component {
 
@@ -12,6 +13,9 @@ export class Sidebar extends React.Component {
             <div id="next-previous-buttons">
                 <button onClick={this.props.previousDay}>
                     <img src={arrow} id="previous-arrow" alt="previous day"></img>
+                </button>
+                <button onClick={this.props.toCurrentDate}>
+                    <img src={circle} id="current-date" alt="current date"></img>
                 </button>
                 <button onClick={this.props.nextDay}>
                     <img src={arrow} id="next-arrow" alt="next day"></img>
