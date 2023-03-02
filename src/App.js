@@ -1,9 +1,15 @@
 import React from 'react';
+import ReactGA from 'react-ga';
+
 import './App.css';
 import { FastingText } from './components/fasting-text/fasting-text.js';
 import { Sidebar } from './components/sidebar/sidebar.js';
 import { About } from './components/about/about.js';
 import { FAQ } from './components/faq/faq.js';
+
+// GA Analytics
+const GA_TRACKING_ID = "UA-259094917-1";
+ReactGA.initialize(GA_TRACKING_ID);
 
 class App extends React.Component {
   constructor(props) {
@@ -18,6 +24,7 @@ class App extends React.Component {
     };
     this.nextDay = this.nextDay.bind(this);
     this.previousDay = this.previousDay.bind(this);
+    this.toCurrentDate = this.toCurrentDate.bind(this);
 
     this.months = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
     "October", "November", "December"];
@@ -133,6 +140,12 @@ class App extends React.Component {
     await this.fetchDateJSON();
     this.setNewData();
     this.openTracker();
+    
+    // Analytics
+    ReactGA.event({
+      category: 'User',
+      action: 'viewed next day'
+    });
   }
 
   async previousDay() {
@@ -140,6 +153,25 @@ class App extends React.Component {
     await this.fetchDateJSON();
     this.setNewData();
     this.openTracker();
+
+    // Analytics
+    ReactGA.event({
+      category: 'User',
+      action: 'viewed previous day'
+    });
+  }
+
+  async toCurrentDate() {
+    this.selectedDate = new Date();
+    await this.fetchDateJSON();
+    this.setNewData();
+    this.openTracker();
+
+    // Analytics
+    ReactGA.event({
+      category: 'User',
+      action: 'returned to current day'
+    });
   }
 
   openAbout() {
@@ -152,6 +184,12 @@ class App extends React.Component {
     // show about
     document.getElementById("about-page").style.display = "block";
     document.getElementById("about-link").className += " sidebar-current";
+
+    // Analytics
+    ReactGA.event({
+      category: 'User',
+      action: 'visited About'
+    });
   }
 
   openFAQ() {
@@ -164,6 +202,12 @@ class App extends React.Component {
     // show FAQ
     document.getElementById("faq-page").style.display = "block";
     document.getElementById("faq-link").className += " sidebar-current";
+
+    // GA Analytics
+    ReactGA.event({
+      category: 'User',
+      action: 'visited FAQ'
+    });
   }
 
   openTracker() {
@@ -176,6 +220,12 @@ class App extends React.Component {
     // show fast tracker
     document.getElementById("fast-tracker").style.display = "block";
     document.getElementById("fast-tracker-link").className += " sidebar-current";
+
+    // GA Analytics
+    ReactGA.event({
+      category: 'User',
+      action: 'visited Tracker'
+    });
   }
 
   render() {
@@ -186,6 +236,7 @@ class App extends React.Component {
           dateText={this.state.dateString} 
           nextDay={this.nextDay} 
           previousDay={this.previousDay}
+          toCurrentDate={this.toCurrentDate}
           openTracker={this.openTracker}
           openAbout={this.openAbout}
           openFAQ={this.openFAQ}>
