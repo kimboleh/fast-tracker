@@ -16,3 +16,18 @@ a {
     font-weight: 400;
     font-size: 18pt;
 }
+
+/* MOBILE */
+@media screen and (max-width: 800px) {
+    #about-text {
+        font-size: 14pt;
+        margin: 0px;
+        text-align: left;
+        }
+    #text-body {
+        margin: auto;
+        padding: 30px 25px 30px 25px; /* up right down left */
+        max-width: 85%;
+        box-shadow: 0 0 3px 0 hsla(0, 0%, 0%, 0.4);
+        }
+}

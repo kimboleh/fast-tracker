@@ -106,6 +106,7 @@ p {
 @media screen and (max-width: 800px) {
   .main-content {
     margin-left: 0;
+    padding: 25px;
   }
 
   #titles h1 {
