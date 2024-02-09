@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactGA from 'react-ga';
 
-import './App.css';
+import './global.scss';
 import { FastingText } from './components/fasting-text/fasting-text.js';
 import { Sidebar } from './components/sidebar/sidebar.js';
 import { About } from './components/about/about.js';

@@ -1,5 +1,5 @@
 import React from 'react';
-import './faq.css';
+import './faq.scss';
 
 export class FAQ extends React.Component {
 

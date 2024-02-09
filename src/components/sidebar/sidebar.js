@@ -1,5 +1,5 @@
 import React from 'react';
-import './sidebar.css';
+import './sidebar.scss';
 import arrow from '../fast-icons/arrow.svg';
 import circle from '../fast-icons/circle.svg';
 

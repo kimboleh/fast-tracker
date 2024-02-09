@@ -1,5 +1,5 @@
 import React from 'react';
-import './fasting-text.css';
+import './fasting-text.scss';
 import meat from '../fast-icons/meat.svg';
 import dairy from '../fast-icons/dairy.svg';
 import fish from '../fast-icons/fish.svg';
