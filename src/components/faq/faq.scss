@@ -1,3 +1,5 @@
+@use "src/components/utilities/_variables.scss" as *;
+
 details[open] summary ~ * {
     animation: sweep .5s ease-in-out;
   }
@@ -15,7 +17,7 @@ summary {
     align-items: center;
     font-size: 14pt;
     background-color: rgba(35, 12, 15, 0.1);
-    border-left: 5px solid var(--english-violet);
+    border-left: 5px solid $purple;
 }
 
 @keyframes sweep {
@@ -31,6 +33,6 @@ summary {
         align-items: center;
         font-size: 14pt;
         background-color: rgba(35, 12, 15, 0.1);
-        border-left: 5px solid var(--english-violet);
+        border-left: 5px solid $purple;
     }
   }

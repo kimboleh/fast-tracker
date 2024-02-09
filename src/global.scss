@@ -1,42 +1,33 @@
+@use "src/components/utilities/_variables.scss" as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
-:root {
-  /* CSS HEX */
-  --redwood: #AF5D63; /* pink */
-  --english-violet: #4d2d52; /* purple */
-  --air-force-blue: #698996; /* blue */
-  --saffron: #e1bc29; /* gold */
-  --off-white: #fffaf1; /* white */
-  --british-racing-green: #034732; /* green */
-  --dark: #230C0F; /* black */
-}
-
 .gold {
-  background-color: var(--saffron);
+  background-color: $gold;
 }
 
 .green {
-  background-color: var(--british-racing-green);
+  background-color: $green;
 }
 
 .white {
-  background-color: var(--off-white);
+  background-color: $white;
 }
 
 .purple {
-  background-color: var(--english-violet);
+  background-color: $purple;
 }
 
 .blue {
-  background-color: var(--air-force-blue);
+  background-color: $blue;
 }
 
 .pink {
-  background-color: var(--redwood);
+  background-color: $rose;
 }
 
 .red {
-  background-color: red;
+  background-color: darkred;
 }
 
 body {

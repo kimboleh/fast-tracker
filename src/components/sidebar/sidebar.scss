@@ -1,3 +1,5 @@
+@use "src/components/utilities/_variables.scss" as *;
+
 #sidebar {
     /* grid-column: span 1; */
     margin: 0;
@@ -11,12 +13,12 @@
   }
 
   .light {
-    background-color: var(--off-white);
+    background-color: $white;
   }
 
   .dark {
-    background-color: var(--dark);
-    color: var(--off-white);
+    background-color: $black;
+    color: $white;
   }
   
   #title {
@@ -28,7 +30,7 @@
   
   a {
     text-decoration: none;
-    color: var(--deep-space-sparkle);
+    color: $purple;
   }
   
   #dateText {
@@ -53,7 +55,7 @@
   
   div.sidebar-link:hover {
     background-color: hsla(0, 0%, 0%, 0.05);
-    border-left: 8px solid var(--english-violet);
+    border-left: 8px solid $purple;
     cursor: pointer;
   }
   
@@ -62,7 +64,7 @@
     color: #111;
     background-color: hsla(0, 0%, 0%, 0.1);
     padding-left: -5px;
-    border-left: 8px solid var(--english-violet);
+    border-left: 8px solid $purple;
   }
 
   #list-title {
