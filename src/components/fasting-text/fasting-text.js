@@ -33,18 +33,18 @@ export class FastingText extends React.Component {
     return (
       <div id="fast-tracker" className="main-content">
         <div id='text-body' className='light'>
-          <div id="titles">
-            <h1>Meat & Right</h1>
-            <h2>An OCA Fasting Tracker</h2>
+          <div id="date-info">
+            <div id="title" tabIndex='0'><h1>{this.props.title}</h1></div>
+            <div id="dateText" tabIndex='0'><h2>{this.props.dateText}</h2></div>
           </div>
           <div id="fast-icons" className='light'>
-            <img src={meat} id="meat" className="fast-icon" alt={this.meatStr}></img>
-            <img src={dairy} id="dairy" className="fast-icon" alt={this.dairyStr}></img>
-            <img src={fish} id="fish" className="fast-icon" alt={this.fishStr}></img>
-            <img src={alcohol} id="alcohol" className="fast-icon" alt={this.alcStr}></img>
-            <img src={oil} id="oil" className="fast-icon" alt={this.oilStr}></img>
+            <img src={meat} id="meat" className="fast-icon" alt={this.meatStr} tabIndex='0'></img>
+            <img src={dairy} id="dairy" className="fast-icon" alt={this.dairyStr} tabIndex='0'></img>
+            <img src={fish} id="fish" className="fast-icon" alt={this.fishStr} tabIndex='0'></img>
+            <img src={alcohol} id="alcohol" className="fast-icon" alt={this.alcStr} tabIndex='0'></img>
+            <img src={oil} id="oil" className="fast-icon" alt={this.oilStr} tabIndex='0'></img>
           </div>
-          <div id="fast-description">{this.props.fastDesc}</div>
+          <div id="fast-description" tabIndex='0'>{this.props.fastDesc}</div>
         </div>
       </div>
     );

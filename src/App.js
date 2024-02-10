@@ -228,12 +228,22 @@ class App extends React.Component {
     });
   }
 
+  focusFastDesc() {
+    console.log("focusing fast description");
+    if (document.getElementById("fast-tracker").style.display == "none") {
+      this.openTracker();
+    }
+
+    document.getElementById("fast-description").focus();
+  }
+
   render() {
     return (
       <div id="app" className="App">
-        <Sidebar 
-          title={this.state.title} 
-          dateText={this.state.dateString} 
+        <div id="skip-to-fast-description">
+          <button id="skip-btn" onClick={this.focusFastDesc} tabIndex='1'>Skip to Fast Description</button>
+        </div>
+        <Sidebar  
           nextDay={this.nextDay} 
           previousDay={this.previousDay}
           toCurrentDate={this.toCurrentDate}
@@ -241,7 +251,11 @@ class App extends React.Component {
           openAbout={this.openAbout}
           openFAQ={this.openFAQ}>
         </Sidebar>
-        <FastingText fasts={this.state.fasts} fastDesc={this.state.fastDescripton} />
+        <FastingText
+          title={this.state.title} 
+          dateText={this.state.dateString}
+          fasts={this.state.fasts}
+          fastDesc={this.state.fastDescripton} />
         <About />
         <FAQ />
       </div>

@@ -41,6 +41,30 @@ p {
   text-align: justify;
 }
 
+#skip-to-fast-description {
+  background-color: $white;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 5px;
+  position: absolute;
+  z-index: 2;
+  margin-top: -50px;
+  margin-left: 15%;
+
+  transition: margin-top .5s;
+
+  button {
+    background-color: transparent;
+    border: none;
+    border-radius: 0 0 15px 15px;
+    box-shadow: none;
+    padding: .5rem;
+  }
+}
+
+#skip-to-fast-description:focus-within {
+  margin-top: 0;
+}
+
 .main-content {
   /* grid-column: span 1; */
 
@@ -69,21 +93,20 @@ p {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-}
 
-#titles h1 {
-  font-weight: 600;
-  font-size: 40pt;
-  margin: 0;
-}
+  h1 {
+    font-weight: 600;
+    font-size: 40pt;
+    margin: 0;
+  }
 
-#titles h2 {
-  font-weight: 200;
-  font-size: 18pt;
-  margin-top: 0;
-  font-style: italic;
+  h2 {
+    font-weight: 200;
+    font-size: 18pt;
+    margin-top: 0;
+    font-style: italic;
+  }
 }
-
 #about-page {
   display: none;
 }
@@ -101,19 +124,30 @@ p {
   
   .main-content {
     margin-left: 0;
+    margin-top: 0;
     padding: 25px;
   }
 
-  #titles h1 {
-    font-weight: 600;
-    font-size: 35pt;
-    margin: 0;
+  #skip-to-fast-description {
+    margin-top: -200%;
   }
 
-  #titles h2 {
-    font-weight: 200;
-    font-size: 16pt;
-    margin-top: 10px;
-    font-style: italic;
+  #skip-to-fast-description:hover {
+    top: -16px;
+  }
+
+  #titles {
+    h1 {
+      font-weight: 600;
+      font-size: 35pt;
+      margin: 0;
+    }
+
+    h2 {
+      font-weight: 200;
+      font-size: 16pt;
+      margin-top: 10px;
+      font-style: italic;
+    }
   }
 }

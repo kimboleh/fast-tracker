@@ -2,14 +2,48 @@
 
 #sidebar {
     /* grid-column: span 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     margin: 0;
-    padding-top: 15px;
     width: 325px;
     position: fixed;
     height: 100%;
     vertical-align: top;
     box-shadow: 0 0 6px 0 hsla(0, 0%, 0%, 0.4);
     text-align: center;
+  }
+
+  #site-title {
+    margin: 30px auto 0 auto;
+    font-weight: 700;
+    font-size: 48pt;
+    letter-spacing: 0.01em;
+    line-height: 1;
+    text-align: left;
+  }
+  
+  .hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  #meat-logo {
+    height: 55px;
+    width: auto;
+    vertical-align: bottom;
+    margin-left: 10px;
+  }
+  
+  h2 {
+    font-size: 18pt;
+    font-weight: 200;
   }
 
   .light {
@@ -21,21 +55,9 @@
     color: $white;
   }
   
-  #title {
-    font-weight: 400;
-    font-size: 32pt;
-    letter-spacing: 0.01em;
-    padding: 5%;
-  }
-  
   a {
     text-decoration: none;
     color: $purple;
-  }
-  
-  #dateText {
-    font-size: 18pt;
-    font-weight: 200;
   }
   
   .sidebar-link {
@@ -66,25 +88,14 @@
     padding-left: -5px;
     border-left: 8px solid $purple;
   }
-
-  #list-title {
-    margin-top: 70px;
-    font-size: 14pt;
-    font-style: italic;
-  }
-  
-  #list {
-    text-align: left;
-    margin: 15px;
-    font-style: italic;
-  }
   
   .tooltip {
     z-index: 1011;
   }
 
   #next-previous-buttons {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 70%;
     padding: 10px;
     display: flex;
@@ -128,15 +139,22 @@
       width: 100%;
       height: auto;
       position: relative;
+      top: -16px;
     }
 
-    #title {
-        letter-spacing: 0;
-        font-size: 24pt;
+    #site-title {
+      letter-spacing: 0;
+      font-size: 28pt;
+      text-align: center;
     }
 
-    #list-title, #list {
-        display: none;
+    #meat-logo {
+      height: 28px;
+      margin-left: 5px;
+    }
+
+    h2 {
+      font-size: 14pt;
     }
 
     #next-previous-buttons {
@@ -148,7 +166,7 @@
       }
 
     #next-previous-buttons img {
-        height: 60px;
+        height: 50px;
       }
 
     div.sidebar-link {
@@ -171,6 +189,6 @@
         color: #111;
         background-color: hsla(0, 0%, 0%, 0.1);
         padding-left: -5px;
-        border-left: 8px solid var(--english-violet);
+        border-left: 8px solid $purple;
     }
   }
