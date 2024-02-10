@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.1039327c.css",
-    "main.js": "/static/js/main.af530df3.js",
+    "main.css": "/static/css/main.cccbc77d.css",
+    "main.js": "/static/js/main.60d27dfd.js",
     "static/js/787.757219be.chunk.js": "/static/js/787.757219be.chunk.js",
-    "service-worker.js": "/service-worker.js",
-    "static/media/oil.svg": "/static/media/oil.0135da3f9d8cfcc43a7bcf79e6c17df2.svg",
-    "static/media/meat.svg": "/static/media/meat.b8a882d8c368e8e955acbba2588a939c.svg",
-    "static/media/dairy.svg": "/static/media/dairy.e1f4edcc39f2bd959fc3a3309e4233f0.svg",
-    "static/media/fish.svg": "/static/media/fish.74465c88c32c5be080fc69053e242f04.svg",
+    "static/media/oil.svg": "/static/media/oil.bc1d11f831f38bfd36350fe9d3b11f7c.svg",
+    "static/media/meat.svg": "/static/media/meat.fece49e85997ec07cb750679f8cbd6ec.svg",
+    "static/media/dairy.svg": "/static/media/dairy.4e253d2d7f662b94ed483c45849ad33e.svg",
+    "static/media/fish.svg": "/static/media/fish.3f590a712e4336e4dacc4d044cb3f4c9.svg",
     "index.html": "/index.html",
-    "static/media/alcohol.svg": "/static/media/alcohol.1c19c90c3225cdaa330c834f5b5c61d9.svg",
+    "static/media/alcohol.svg": "/static/media/alcohol.6f7a60403af5e12a9487735ad4c97661.svg",
     "static/media/arrow.svg": "/static/media/arrow.aebaaac384133a5e33e6a2d6fc065df7.svg",
     "static/media/circle.svg": "/static/media/circle.ae680f2b23120e32502f1c19d507276d.svg",
-    "main.1039327c.css.map": "/static/css/main.1039327c.css.map",
-    "main.af530df3.js.map": "/static/js/main.af530df3.js.map",
+    "main.cccbc77d.css.map": "/static/css/main.cccbc77d.css.map",
+    "main.60d27dfd.js.map": "/static/js/main.60d27dfd.js.map",
     "787.757219be.chunk.js.map": "/static/js/787.757219be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1039327c.css",
-    "static/js/main.af530df3.js"
+    "static/css/main.cccbc77d.css",
+    "static/js/main.60d27dfd.js"
   ]
 }
