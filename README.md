@@ -1,8 +1,21 @@
-# Getting Started with Create React App
+# Meat & Right: an Eastern Christian Fasting Tool
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Meat & Right is a tool for Eastern Orthodox Christians (primarily those from the Orthodox Church of America, or OCA) to check what the typical fast requirements are on a daily basis. It pulls its information from the [Orthodox Calendar API](https://orthocal.info/api), created by @brianglass.
 
-## Available Scripts
+## Planned Features
+
+In no particular order, features planned for Meat & Right include:
+
+- a monthly calendar view
+- ability to toggle between "New Calendar" (Gregorian) and "Old Calendar" (Julian) fasting dates (included in the Orthocal API)
+- recipe ideas to match with different fasting requirements
+- customizable push notifications to alert users of upcoming fasts &/or feasts
+- fast customization for anyone practicing different fasts on the same calendar
+- ability to toggle between different church fasting calendars (this may require finding different APIs)
+
+## Starting the Application
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and can be run the same way most CRA applications are.\
 
 In the project directory, you can run:
 
@@ -45,26 +58,7 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
 ### Making a Progressive Web App
 
+Saving this for the developer's future reference!\
 This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
