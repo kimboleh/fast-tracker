@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "add-domain": "echo 'www.meatandright.com' > ./build/CNAME",
+    "add-domain": "echo www.meatandright.com > ./build/CNAME",
     "predeploy": "npm run build",
     "deploy": "npm run add-domain && gh-pages -d build",
     "build": "react-scripts build",
