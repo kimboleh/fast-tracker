@@ -64,8 +64,10 @@ class App extends React.Component {
     var numericalDay = dateObject.getDate();
 
     this.setState({dateString: this.months[month] + " " + numericalDay + ", " + year});
-    if (json.titles.length > 0) {
+    if (json.titles) {
       this.setState({title: json.titles[0]});
+    } else if (json.summary_title) {
+      this.setState({title: json.summary_title});
     }
   }
 
