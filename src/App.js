@@ -232,7 +232,7 @@ class App extends React.Component {
 
   focusFastDesc() {
     console.log("focusing fast description");
-    if (document.getElementById("fast-tracker").style.display == "none") {
+    if (document.getElementById("fast-tracker").style.display === "none") {
       this.openTracker();
     }
 

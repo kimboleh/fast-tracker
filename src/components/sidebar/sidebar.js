@@ -2,7 +2,7 @@ import React from 'react';
 import './sidebar.scss';
 import meat from '../fast-icons/meat.svg';
 import arrow from '../fast-icons/arrow.svg';
-import circle from '../fast-icons/circle.svg';
+import today from '../fast-icons/today-icon.svg';
 
 export class Sidebar extends React.Component {
 
@@ -10,16 +10,16 @@ export class Sidebar extends React.Component {
     return (
         <div id="sidebar" className='light'>
             <div id="site-title">Meat<img src={meat} id="meat-logo" className="fast-icon" alt="logo - icon of a porkchop"/><br/>& Right</div>
-            <h1 aria-label="Meat and Right" class="hidden"></h1>
+            <h1 aria-label="Meat and Right" class="hidden">Meat and Right</h1>
             <h2>An OCA Fasting Tracker</h2>
             <div id="next-previous-buttons">
-                <button onClick={this.props.previousDay}>
+                <button onClick={this.props.previousDay} title="Previous day">
                     <img src={arrow} id="previous-arrow" alt="previous day"></img>
                 </button>
-                <button onClick={this.props.toCurrentDate}>
-                    <img src={circle} id="current-date" alt="current date"></img>
+                <button onClick={this.props.toCurrentDate} title="Today">
+                    <img src={today} id="current-date" alt="current date"></img>
                 </button>
-                <button onClick={this.props.nextDay}>
+                <button onClick={this.props.nextDay} title="Next day">
                     <img src={arrow} id="next-arrow" alt="next day"></img>
                 </button>
             </div>
