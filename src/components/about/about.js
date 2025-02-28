@@ -22,8 +22,8 @@ export class About extends React.Component {
                     with where it is so far!
                 </p>
                 
-                <p>All images are used freely with a CC0 license. All data is taken from the <a href="https://orthocal.info/">orthocal.info</a> API - most of what my code does is just make it look pretty! 
-                If you encounter any errors, please let me know, either via <a href="mailto:kimberlynachbur@gmail.com">email</a> or my <a href="https://twitter.com/kimberlycaritas">Twitter</a>, 
+                <p>All images are used freely with a CC0 license or credited to SVG Repo under the MIT License. All data is taken from the <a href="https://orthocal.info/">orthocal.info</a> API - most of what my code does is just make it look pretty! 
+                If you encounter any errors, please let me know, either via <a href="mailto:meatandright@gmail.com">email</a> or my <a href="https://twitter.com/kimberlycaritas">Twitter</a>, 
                 and I'll do my best to fix it.</p>
             </div>
         </div>
