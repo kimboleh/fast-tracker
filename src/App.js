@@ -73,6 +73,10 @@ class App extends React.Component {
 
   setColor(pascha_distance) {
     const body = document.getElementsByTagName('body')[0];
+    const sidebarLinks = document.getElementsByClassName('sidebar-link');
+    const currentTab = document.getElementsByClassName('sidebar-current')[0];
+
+    let liturgicalColor = '#FFFFFF';
 
     /* blue - Marian feasts, Presentation, Annunciation, & Akathist */
 
@@ -80,26 +84,36 @@ class App extends React.Component {
      * feast days for holy martyrs, and Great & Holy Thursday */
     if (pascha_distance === -3) {
       body.className = 'red';
+      liturgicalColor = '#8b0000';
     }
     /* green - Pentecost, Palm Sunday, & days commemmorating angels, prophets,
      * monastic saints, ascetics, & fools for Christ */
     else if (pascha_distance === -7 || pascha_distance === 49) {
       body.className = 'green';
+      liturgicalColor = '#034732';
     }
     /* black/purple - Lent */
     else if (pascha_distance >= -48 && pascha_distance < 0) {
       body.className = 'purple';
+      liturgicalColor = '#4d2d52';
     }
     /* white - Epiphany, Transfiguration, & Pascha */
     else if (pascha_distance === 0) {
       body.className = 'white';
-      document.getElementById('sidebar').className = 'dark';
-      document.getElementById('text-body').className = 'dark';
+      liturgicalColor = '#fffaf1';
+      // document.getElementById('sidebar').className = 'dark';
+      // document.getElementById('text-body').className = 'dark';
     }
     /* gold - default */
     else {
       body.className = 'gold';
+      liturgicalColor = '#e1bc29';
     }
+
+    currentTab.style.setProperty('--liturgical-color', liturgicalColor);
+      for (const link of sidebarLinks) {
+        link.style.setProperty('--liturgical-color', liturgicalColor);
+      }
   }
 
   setFast() {
