@@ -1,9 +1,16 @@
 #date-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  height: 11rem;
+
   h1 {
     font-weight: 400;
     font-size: 32pt;
     padding: .5rem;
     text-align: center;
+    margin: 0;
   }
   h2 {
     font-weight: 200;
@@ -12,6 +19,18 @@
     font-style: italic;
     text-align: center;
   }
+}
+
+#next-previous-buttons {
+  margin: auto;
+  max-width: 300px;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#next-previous-buttons img {
+  height: 50px;
 }
 
 #fast-icons {
@@ -46,4 +65,10 @@
 
 .hidden {
   visibility: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  #date-info {
+    height: auto;
+  }
 }

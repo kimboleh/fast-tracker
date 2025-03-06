@@ -6,6 +6,7 @@ import { FastingText } from './components/fasting-text/fasting-text.js';
 import { Sidebar } from './components/sidebar/sidebar.js';
 import { About } from './components/about/about.js';
 import { FAQ } from './components/faq/faq.js';
+import { Calendar } from './components/calendar/calendar.js';
 
 // GA Analytics
 const GA_TRACKING_ID = "UA-259094917-1";
@@ -196,6 +197,8 @@ class App extends React.Component {
     document.getElementById("fast-tracker-link").className = "sidebar-link";
     document.getElementById("faq-page").style.display = "none";
     document.getElementById("faq-link").className = "sidebar-link";
+    document.getElementById("cal-page").style.display = "none";
+    document.getElementById("cal-link").className = " sidebar-link";
 
     // show about
     document.getElementById("about-page").style.display = "block";
@@ -214,10 +217,32 @@ class App extends React.Component {
     document.getElementById("fast-tracker-link").className = "sidebar-link";
     document.getElementById("about-page").style.display = "none";
     document.getElementById("about-link").className = "sidebar-link";
+    document.getElementById("cal-page").style.display = "none";
+    document.getElementById("cal-link").className = " sidebar-link";
 
     // show FAQ
     document.getElementById("faq-page").style.display = "block";
     document.getElementById("faq-link").className += " sidebar-current";
+
+    // GA Analytics
+    ReactGA.event({
+      category: 'User',
+      action: 'visited FAQ'
+    });
+  }
+
+  openCal() {
+    // hide FastTracker and About content
+    document.getElementById("fast-tracker").style.display = "none";
+    document.getElementById("fast-tracker-link").className = "sidebar-link";
+    document.getElementById("about-page").style.display = "none";
+    document.getElementById("about-link").className = "sidebar-link";
+    document.getElementById("faq-page").style.display = "none";
+    document.getElementById("faq-link").className = " sidebar-link";
+
+    // show Cal
+    document.getElementById("cal-page").style.display = "block";
+    document.getElementById("cal-link").className += " sidebar-current";
 
     // GA Analytics
     ReactGA.event({
@@ -232,6 +257,8 @@ class App extends React.Component {
     document.getElementById("about-link").className = "sidebar-link";
     document.getElementById("faq-page").style.display = "none";
     document.getElementById("faq-link").className = "sidebar-link";
+    document.getElementById("cal-page").style.display = "none";
+    document.getElementById("cal-link").className = " sidebar-link";
 
     // show fast tracker
     document.getElementById("fast-tracker").style.display = "block";
@@ -260,20 +287,22 @@ class App extends React.Component {
           <button id="skip-btn" onClick={this.focusFastDesc} tabIndex='1'>Skip to Fast Description</button>
         </div>
         <Sidebar  
+          openTracker={this.openTracker}
+          openAbout={this.openAbout}
+          openFAQ={this.openFAQ}
+          openCal={this.openCal}>
+        </Sidebar>
+        <FastingText
           nextDay={this.nextDay} 
           previousDay={this.previousDay}
           toCurrentDate={this.toCurrentDate}
-          openTracker={this.openTracker}
-          openAbout={this.openAbout}
-          openFAQ={this.openFAQ}>
-        </Sidebar>
-        <FastingText
           title={this.state.title} 
           dateText={this.state.dateString}
           fasts={this.state.fasts}
           fastDesc={this.state.fastDescripton} />
         <About />
         <FAQ />
+        <Calendar />
       </div>
     );
   }

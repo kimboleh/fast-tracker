@@ -81,7 +81,7 @@ p {
 
 #text-body {
   margin: auto;
-  padding: 30px 65px 30px 65px; /* up right down left */
+  padding: 50px 65px 50px 65px; /* up right down left */
   max-width: 75%;
   box-shadow: 0 0 3px 0 hsla(0, 0%, 0%, 0.4);
 }
@@ -107,17 +107,53 @@ p {
     font-style: italic;
   }
 }
-#about-page {
-  display: none;
+
+#next-previous-buttons {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
 }
 
-#faq-page {
-  display: none;
+#next-previous-buttons img {
+  height: 50px;
 }
 
+#next-previous-buttons button {
+  display: flex;
+  margin: 10px;
+  background-color: transparent;
+  border: none;
+  font-family: Lora;
+  font-size: 14pt;
+}
+
+#next-previous-buttons button:hover {
+  cursor: pointer;
+}
+
+#previous-arrow {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  align-items: flex-end;
+}
+
+#next-arrow {
+  align-items: flex-end;
+}
+
+/* SMALLER SCREENS */
+@media screen and (max-width: 1200px) {
+  #text-body {
+    padding: 40px;
+  }
+}
 
 /* MOBILE */
 @media screen and (max-width: 800px) {
+  #text-body {
+    padding: 30px;
+  }
+
   p {
     text-align: left;
   }

@@ -1,0 +1,149 @@
+@use "src/components/utilities/_variables.scss" as *;
+
+// Start it off hidden
+#cal-page {
+    display: none;
+}
+
+#calendar-current-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #current-month {
+        height: 35px;
+    }
+}
+
+.calendar-container header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .calendar-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 400px;
+}
+
+header .calendar-current-date {
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin: 0;
+    text-align: center;
+}
+
+.calendar-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.calendar-body .calendar-dates {
+    margin-bottom: 20px;
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.calendar-dates {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(7, minmax(0, 1fr)); // Ensures equal columns
+    gap: 5px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.calendar-day {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    aspect-ratio: 1 / 1;  // Keeps squares proportional
+    max-width: 5.5vw; /* Adjust based on how big you want each square */
+    overflow: hidden;
+
+    .date-number {
+        align-self: flex-end;
+    }
+
+    .fasting-icons {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2px;
+        width: 100%;
+
+        .icon {
+            flex: 0 0 33.3333%;
+            min-width: 15px;
+        }
+    }
+}
+
+.calendar-day.active {
+    background: $gold;
+    font-weight: bold;
+}
+
+.calendar-day:not(.active):hover::before {
+    background: #e4e1e1;
+}
+
+.calendar-day.inactive {
+    color: gray;
+    opacity: 0.5;
+}
+
+/* SMALLER SCREENS */
+@media screen and (max-width: 1300px) {
+    .calendar-day {
+        padding: 5px;
+
+        .date-number {
+            font-size: 12px;
+        }
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .calendar-dates {
+        grid-template-columns: repeat(7, minmax(0, 1fr)); // Keeps it evenly spaced
+        gap: 3px; // Reduce gaps on smaller screens
+    }
+
+    .calendar-day {
+        padding: 5px; /* Reduce padding to fit better */
+        font-size: 0.7rem; /* Smaller text */
+        max-width: 8vw;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .calendar-dates {
+        grid-template-columns: repeat(7, minmax(20px, 1fr)); /* Allow further shrinking */
+    }
+
+    .calendar-day {
+        font-size: 0.7rem; /* Adjust font size */
+        padding: 2px;
+    }
+}

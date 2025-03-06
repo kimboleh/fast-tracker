@@ -1,3 +1,8 @@
+// Start it off hidden
+#about-page {
+  display: none;
+}
+
 a {
     text-decoration: underline;
     color: var(--air-force-blue);

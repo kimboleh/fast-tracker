@@ -1,5 +1,14 @@
 @use "src/components/utilities/_variables.scss" as *;
 
+hr {
+  border: none; 
+  height: 2px;
+  background-color: #777; /* Make it visible */
+  margin: 20px 0;
+  width: 70%;
+  align-self: center;
+}
+
 #sidebar {
     /* grid-column: span 1; */
     display: flex;
@@ -60,6 +69,10 @@
     color: $purple;
   }
   
+  #links {
+    padding-top: 10px;
+  }
+
   .sidebar-link {
     left: 0;
     text-align: left;
@@ -93,49 +106,16 @@
     z-index: 1011;
   }
 
-  #next-previous-buttons {
-    padding: 20px 30px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  #next-previous-buttons img {
-    height: 50px;
-  }
-
-  #next-previous-buttons button {
-    display: flex;
-    margin: 10px;
-    background-color: transparent;
-    border: none;
-    font-family: Lora;
-    font-size: 14pt;
-  }
-
-  #next-previous-buttons button:hover {
-    cursor: pointer;
-  }
-
-  #previous-arrow {
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    align-items: flex-end;
-  }
-
-  #next-arrow {
-    align-items: flex-end;
-  }
-
-  #current-date {
-    /* max-width: 40px; */
-  }
-
   @media screen and (max-width: 800px) {
     #sidebar {
       width: 100%;
       height: auto;
       position: relative;
       top: -16px;
+
+      hr {
+        display: none;
+      }
     }
 
     #site-title {
@@ -152,18 +132,6 @@
     h2 {
       font-size: 14pt;
     }
-
-    #next-previous-buttons {
-        margin: auto;
-        max-width: 300px;
-        padding: 0px;
-        display: flex;
-        justify-content: space-between;
-      }
-
-    #next-previous-buttons img {
-        height: 50px;
-      }
 
     div.sidebar-link {
         font-weight: 400;
