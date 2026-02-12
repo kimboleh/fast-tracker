@@ -100,8 +100,8 @@ export class FAQ extends React.Component {
                 <details>
                     <summary>Who made this website?</summary>
                     <div className='answer'>
-                        This website was created by Kimberly Nachbur, a budding web developer in the Portland, Oregon area. 
-                        You can find her on <a href='http://www.twitter.com/kimberlycaritas'>Twitter</a>, or over on her blog at <a href="http://www.kimberlynachbur.com">kimberlynachbur.com</a>.
+                        This website was created by Kimberly, a web developer in the Portland, Oregon area. 
+                        You can find <a href='http://kimboleh.dev'>her portfolio over here</a>!
                     </div>
                 </details>
             </div>
