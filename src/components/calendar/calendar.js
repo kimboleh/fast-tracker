@@ -86,7 +86,7 @@ const Calendar = () => {
                 ));
                 break;
               case 3:
-              case 1: // Wine & oil allowed
+              case 1: case 6: // Wine & oil allowed
                 icons = [alcohol, oil].map((src, index) => (
                     <img key={index} src={src} className="icon" title="wine & oil allowed" alt="wine and oil allowed" />
                 ));

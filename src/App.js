@@ -141,7 +141,7 @@ class App extends React.Component {
           this.setState({fasts: ['meat', 'dairy'], fastDescripton: 'Today is a fish day, so the fast only includes meat and dairy.'});
           break;
         case 3:
-        case 1: // Wine & oil allowed
+        case 1: case 6: // Wine & oil allowed
           this.setState({fasts: ['meat', 'dairy', 'fish'], fastDescripton: 'Wine and oil are permitted, but the fast includes meat, dairy, and fish.'});
           break;
         default:
