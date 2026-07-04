@@ -12,6 +12,4 @@ In no particular order, features planned for Meat & Right include:
 - fast customization for anyone practicing different fasts on the same calendar
 - ability to toggle between different church fasting calendars (this may require finding different APIs)
 
-_If you've found this app helpful, feel free to buy me a coffee!_
-
-[![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png | height=50)](https://buymeacoffee.com/kimboleh)
+_If you've found this app helpful, feel free to [buy me a coffee](https://buymeacoffee.com/kimboleh)!_
