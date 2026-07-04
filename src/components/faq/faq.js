@@ -101,7 +101,7 @@ export class FAQ extends React.Component {
                     <summary>Who made this website?</summary>
                     <div className='answer'>
                         This website was created by Kimberly, a web developer in the Portland, Oregon area. 
-                        You can find <a href='http://kimboleh.dev'>her portfolio over here</a>!
+                        If you'd like to support her or say thanks, feel free to <a href="https://www.buymeacoffee.com/kimboleh">buy her a coffee</a>!
                     </div>
                 </details>
             </div>

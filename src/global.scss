@@ -141,6 +141,10 @@ p {
   align-items: flex-end;
 }
 
+.sub-text {
+  font-size: 12pt;
+}
+
 /* SMALLER SCREENS */
 @media screen and (max-width: 1200px) {
   #text-body {
