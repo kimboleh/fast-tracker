@@ -14,4 +14,4 @@ In no particular order, features planned for Meat & Right include:
 
 _If you've found this app helpful, feel free to buy me a coffee!_
 
-[![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://buymeacoffee.com/kimboleh)
+[![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png | height=50)](https://buymeacoffee.com/kimboleh)
