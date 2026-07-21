@@ -156,3 +156,78 @@ hr {
         border-left: 8px solid $purple;
     }
   }
+
+
+/* Sidebar toggle - code modified from csstoggles.github.io! */
+#calendar-type-toggle {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 10px;
+}
+.toggle {
+  position: relative;
+  height: 32px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  & input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 150px;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+
+    &:checked + label {
+      &:before { background: #c0e7e3; }
+      &:after {
+          content: 'GREGORIAN';
+          background: $green;
+          transform: translatex(0px);
+      }
+    }
+  }
+
+  & label {
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    box-sizing:border-box;
+
+    &:before {
+      content: '';
+      background: $blue;
+      height: 32px;
+      width: 150px;
+      position: relative;
+      display: inline-block;
+      box-sizing:border-box;
+      transition: 0.2s ease-in;
+    }
+
+    &:after {
+      content: 'JULIAN';
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 120px;
+      height: 24px;
+      z-index: 2;
+      display: grid;
+      place-content: center;
+      font-family: arial;
+      font-weight: bold;
+      box-sizing:border-box;
+      color:#FFF;
+      background: #283044;
+      transform: translatex(20px);
+      transition: 0.25s ease-in-out;
+    }
+  }
+}
