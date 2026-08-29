@@ -17,9 +17,9 @@ export class About extends React.Component {
 
                 <p>I first created this project as a way to help well-meaning friends and family who wanted to know what my husband & I were eating. 
                     Back then, it was simply titled "What Can Austin and Kimberly Eat?" and only had text descriptions. In early 2023, I realized 
-                    this tool might actually be helpful for more than just our loved ones & ourselves — so I decided I was going to polish it up 
-                    and make it ready for the public by Great Lent that year. There's still plenty of improvements I'd like to make, but I'm excited 
-                    with where it is so far!
+                    this tool might actually be helpful for more than just our loved ones & ourselves. I decided to polish it up 
+                    for the public by Great Lent that year, and the rest is history! There's still plenty of improvements I'd like to make, but I'm excited 
+                    with where it is so far.
                 </p>
                 
                 <p>All images are used freely with a CC0 license or credited to SVG Repo under the MIT License. All data is taken from the <a href="https://orthocal.info/">orthocal.info</a> API — most of what my code does is just make it look pretty! 
