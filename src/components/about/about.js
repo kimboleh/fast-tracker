@@ -26,7 +26,7 @@ export class About extends React.Component {
                 If you encounter any errors, <a href="mailto:meatandright@gmail.com">please let me know via email</a>, 
                 and I'll do my best to fix it.</p>
 
-                <p class="sub-text"><em>This calendar will always be free, and I will never run ads. If you want to support my 
+                <p className="sub-text"><em>This calendar will always be free, and I will never run ads. If you want to support my 
                   work or say thanks, feel free to buy me a coffee!</em></p>
                 <a href="https://www.buymeacoffee.com/kimboleh" target="_blank">
                   <img id="coffee-btn" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style={{height: 50 + 'px', width: 175 + 'px'}} />

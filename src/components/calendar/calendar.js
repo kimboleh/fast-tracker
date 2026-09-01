@@ -50,7 +50,7 @@ const Calendar = () => {
         return (
             <div className={`calendar-day ${extraClass}`}>
                 <span className="date-number">{dateNumber}</span>
-                <div class="fasting-icons">{eventData ? 
+                <div className="fasting-icons">{eventData ? 
                     getFastingIcons(eventData.fast_level, eventData.fast_exception)
                 : ""}
                 </div>

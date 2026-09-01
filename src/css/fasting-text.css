@@ -4,21 +4,20 @@
   justify-content: center;
   gap: 10px;
   height: 11rem;
-
-  h1 {
-    font-weight: 400;
-    font-size: clamp(2rem, 5vw, 3rem);
-    padding: .5rem;
-    text-align: center;
-    margin: 0;
-  }
-  h2 {
-    font-weight: 200;
-    font-size: 18pt;
-    margin-top: 0;
-    font-style: italic;
-    text-align: center;
-  }
+}
+#date-info h1 {
+  font-weight: 400;
+  font-size: clamp(2rem, 5vw, 3rem);
+  padding: 0.5rem;
+  text-align: center;
+  margin: 0;
+}
+#date-info h2 {
+  font-weight: 200;
+  font-size: 18pt;
+  margin-top: 0;
+  font-style: italic;
+  text-align: center;
 }
 
 #next-previous-buttons {
@@ -72,12 +71,10 @@
   #date-info {
     height: auto;
   }
-
   .fast-icon {
     max-height: 80px;
   }
-
   #fish {
     max-height: 120px;
   }
-}
+}/*# sourceMappingURL=fasting-text.css.map */
