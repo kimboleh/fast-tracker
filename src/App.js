@@ -21,26 +21,35 @@ class App extends React.Component {
       fastJSON: {},
       fasts: [],
       fastDescripton: '',
-      title: ''
+      title: '',
+      isGregorian: '',
     };
     this.nextDay = this.nextDay.bind(this);
     this.previousDay = this.previousDay.bind(this);
     this.toCurrentDate = this.toCurrentDate.bind(this);
+    this.updateFastingData = this.updateFastingData.bind(this);
 
     this.months = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
     "October", "November", "December"];
     this.selectedDate = new Date();
+
+    // default is Gregorian calendar
+    if (!localStorage.getItem("isGregorian")) {
+      localStorage.setItem("isGregorian", true);
+    }
+    this.isGregorian = localStorage.getItem("isGregorian");
   }
 
   async componentDidMount() {
-    await this.fetchDateJSON();
-    this.setNewData();
+    await this.updateFastingData();
   }
 
   async fetchDateJSON() {
     this.setState({ isDataLoaded: false });
+    const calType = localStorage.getItem("isGregorian") === "true" ? "gregorian" : "julian";
+    const fetchURL = "https://orthocal.info/api/" + calType + "/" + this.selectedDate.getFullYear() + "/" + (this.selectedDate.getMonth() + 1) + "/" + this.selectedDate.getDate();
 
-    await fetch("https://orthocal.info/api/gregorian/" + this.selectedDate.getFullYear() + "/" + (this.selectedDate.getMonth() + 1) + "/" + this.selectedDate.getDate())
+    await fetch(fetchURL)
     .then((res) => res.json())
     .then((json) => {
       this.setState({
@@ -48,10 +57,13 @@ class App extends React.Component {
         isDataLoaded: true});
     })
 
-    console.log(this.state.fastJSON);
+    // console.log(this.state.fastJSON);
+    console.log(fetchURL);
   }
 
-  setNewData() {
+  async updateFastingData() {
+    await this.fetchDateJSON();
+
     if (this.state.isDataLoaded){
       this.setColor(this.state.fastJSON.pascha_distance);
       this.setDateAndTitleStrings(this.selectedDate, this.state.fastJSON);
@@ -154,8 +166,7 @@ class App extends React.Component {
 
   async nextDay() {
     this.selectedDate.setDate(this.selectedDate.getDate() + 1);
-    await this.fetchDateJSON();
-    this.setNewData();
+    await this.updateFastingData();
     this.openTracker();
     
     // Analytics
@@ -167,8 +178,7 @@ class App extends React.Component {
 
   async previousDay() {
     this.selectedDate.setDate(this.selectedDate.getDate() - 1);
-    await this.fetchDateJSON();
-    this.setNewData();
+    await this.updateFastingData();
     this.openTracker();
 
     // Analytics
@@ -180,8 +190,7 @@ class App extends React.Component {
 
   async toCurrentDate() {
     this.selectedDate = new Date();
-    await this.fetchDateJSON();
-    this.setNewData();
+    await this.updateFastingData();
     this.openTracker();
 
     // Analytics
@@ -290,7 +299,8 @@ class App extends React.Component {
           openTracker={this.openTracker}
           openAbout={this.openAbout}
           openFAQ={this.openFAQ}
-          openCal={this.openCal}>
+          openCal={this.openCal}
+          updateFastingData={this.updateFastingData}>
         </Sidebar>
         <FastingText
           nextDay={this.nextDay} 

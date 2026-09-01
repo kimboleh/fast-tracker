@@ -1,0 +1,44 @@
+#about-page {
+  display: none;
+}
+
+#coffee-btn {
+  border-radius: 10px;
+}
+#coffee-btn:hover {
+  box-shadow: 3px 5px 7px 0px rgba(0, 0, 0, 0.3);
+}
+
+a {
+  text-decoration: underline;
+  color: var(--air-force-blue);
+}
+
+a:visited {
+  color: --english-violet;
+}
+
+#about-text {
+  font-size: 16pt;
+  margin: 40px;
+}
+
+.subheader {
+  font-weight: 400;
+  font-size: 18pt;
+}
+
+/* MOBILE */
+@media screen and (max-width: 800px) {
+  #about-text {
+    font-size: 14pt;
+    margin: 0px;
+    text-align: left;
+  }
+  #text-body {
+    margin: auto;
+    padding: 30px 25px 30px 25px; /* up right down left */
+    max-width: 85%;
+    box-shadow: 0 0 3px 0 hsla(0, 0%, 0%, 0.4);
+  }
+}/*# sourceMappingURL=about.css.map */
