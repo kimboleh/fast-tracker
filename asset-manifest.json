@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.4b44a42a.css",
-    "main.js": "/static/js/main.13af09d3.js",
+    "main.css": "/static/css/main.2848e7e1.css",
+    "main.js": "/static/js/main.84258877.js",
     "static/js/453.753b54b7.chunk.js": "/static/js/453.753b54b7.chunk.js",
     "static/media/oil.svg": "/static/media/oil.0135da3f9d8cfcc43a7bcf79e6c17df2.svg",
     "static/media/meat.svg": "/static/media/meat.b8a882d8c368e8e955acbba2588a939c.svg",
     "static/media/dairy.svg": "/static/media/dairy.e1f4edcc39f2bd959fc3a3309e4233f0.svg",
     "static/media/fish.svg": "/static/media/fish.74465c88c32c5be080fc69053e242f04.svg",
     "index.html": "/index.html",
+    "static/media/close-x.svg": "/static/media/close-x.3679f386ffd792ab51f2aac881e12083.svg",
+    "static/media/menu-burger-horizontal.svg": "/static/media/menu-burger-horizontal.390b9556fdc744d00080b71bea9f9d28.svg",
     "static/media/alcohol.svg": "/static/media/alcohol.1c19c90c3225cdaa330c834f5b5c61d9.svg",
     "static/media/today-icon.svg": "/static/media/today-icon.d952c30dcea13c72f02eb173a805031a.svg",
     "static/media/arrow.svg": "/static/media/arrow.aebaaac384133a5e33e6a2d6fc065df7.svg",
     "static/media/circle.svg": "/static/media/circle.ae680f2b23120e32502f1c19d507276d.svg",
-    "main.4b44a42a.css.map": "/static/css/main.4b44a42a.css.map",
-    "main.13af09d3.js.map": "/static/js/main.13af09d3.js.map",
+    "main.2848e7e1.css.map": "/static/css/main.2848e7e1.css.map",
+    "main.84258877.js.map": "/static/js/main.84258877.js.map",
     "453.753b54b7.chunk.js.map": "/static/js/453.753b54b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b44a42a.css",
-    "static/js/main.13af09d3.js"
+    "static/css/main.2848e7e1.css",
+    "static/js/main.84258877.js"
   ]
 }
