@@ -1,0 +1,260 @@
+hr {
+  border: none;
+  height: 2px;
+  background-color: #777; /* Make it visible */
+  margin: 20px 0;
+  width: 70%;
+  align-self: center;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
+  width: 325px;
+  position: fixed;
+  height: 100%;
+  vertical-align: top;
+  box-shadow: 0 0 6px 0 hsla(0, 0%, 0%, 0.4);
+  text-align: center;
+}
+
+#site-title {
+  margin: 30px auto 0 auto;
+  font-weight: 700;
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  letter-spacing: 0.01em;
+  line-height: 1;
+  text-align: left;
+}
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#meat-logo {
+  height: 0.8em;
+  vertical-align: bottom;
+  margin-left: 0.3em;
+  margin-bottom: 0.05em;
+}
+
+h2 {
+  font-size: clamp(0.9rem, 2.5vw, 1.125rem);
+  font-weight: 200;
+}
+
+.light {
+  background-color: #fffaf1;
+}
+
+.dark {
+  background-color: #230C0F;
+  color: #fffaf1;
+}
+
+a {
+  text-decoration: none;
+  color: #4d2d52;
+}
+
+#links {
+  padding-top: 10px;
+}
+
+.sidebar-link {
+  left: 0;
+  text-align: left;
+  padding: 16px;
+  padding-left: 35px;
+  border-left: 8px solid hsla(0, 0%, 0%, 0);
+}
+
+div.sidebar-link {
+  font-weight: 400;
+  font-size: clamp(1rem, 2.8vw, 1.375rem);
+  text-decoration: none;
+  color: #444;
+}
+
+div.sidebar-link:hover {
+  background-color: hsla(0, 0%, 0%, 0.05);
+  border-left: 8px solid var(--liturgical-color);
+  cursor: pointer;
+}
+
+.sidebar-current {
+  font-weight: 500;
+  color: #111;
+  background-color: hsla(0, 0%, 0%, 0.1);
+  padding-left: -5px;
+  border-left: 8px solid var(--liturgical-color);
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+.tooltip {
+  z-index: 1011;
+}
+
+#menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+#menuToggle img {
+  width: 28px;
+  height: 28px;
+}
+
+#calendar-type-toggle {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  #sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: left;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #sidebar hr {
+    display: none;
+  }
+  #site-title {
+    letter-spacing: 0;
+    text-align: left;
+    margin: 0.5em;
+  }
+  h2 {
+    display: none;
+  }
+  #menuToggle {
+    display: block;
+    position: static;
+    margin-right: 12px;
+  }
+  #links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fffaf1;
+    box-shadow: 0 6px 6px 0 hsla(0, 0%, 0%, 0.2);
+    z-index: 15;
+  }
+  #sidebar.menu-open #links {
+    display: flex;
+  }
+  div.sidebar-link {
+    font-weight: 400;
+    text-decoration: none;
+    color: #444;
+  }
+  .sidebar-link {
+    left: 0;
+    text-align: left;
+    padding: 8px;
+    padding-left: 25px;
+    border-left: 8px solid hsla(0, 0%, 0%, 0);
+  }
+  .sidebar-current {
+    font-weight: 500;
+    color: #111;
+    background-color: hsla(0, 0%, 0%, 0.1);
+    padding-left: -5px;
+    border-left: 8px solid #4d2d52;
+  }
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+  }
+  #calendar-type-toggle {
+    position: relative;
+    margin: 16px 15px 8px 15px;
+  }
+}
+/* Gregorian/Julian toggle - code modified from csstoggles.github.io! */
+.toggle {
+  position: relative;
+  height: 32px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.toggle input[type=checkbox] {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 150px;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+.toggle input[type=checkbox]:checked + label:before {
+  background: #c0e7e3;
+}
+.toggle input[type=checkbox]:checked + label:after {
+  content: "GREGORIAN";
+  background: #034732;
+  transform: translatex(0px);
+}
+.toggle label {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  box-sizing: border-box;
+}
+.toggle label:before {
+  content: "";
+  background: #698996;
+  height: 32px;
+  width: 150px;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  transition: 0.2s ease-in;
+}
+.toggle label:after {
+  content: "JULIAN";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 120px;
+  height: 24px;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  font-family: arial;
+  font-weight: bold;
+  box-sizing: border-box;
+  color: #FFF;
+  background: #283044;
+  transform: translatex(20px);
+  transition: 0.25s ease-in-out;
+}/*# sourceMappingURL=sidebar.css.map */
