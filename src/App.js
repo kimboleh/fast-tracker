@@ -23,6 +23,7 @@ class App extends React.Component {
       fastDescripton: '',
       title: '',
       isGregorian: '',
+      isSlavic: '',
     };
     this.nextDay = this.nextDay.bind(this);
     this.previousDay = this.previousDay.bind(this);
@@ -38,6 +39,12 @@ class App extends React.Component {
       localStorage.setItem("isGregorian", true);
     }
     this.isGregorian = localStorage.getItem("isGregorian");
+
+    // default is Slavic/OCA calendar
+    if (!localStorage.getItem("isSlavic")) {
+      localStorage.setItem("isSlavic", true);
+    }
+    this.isSlavic = localStorage.getItem("isSlavic");
   }
 
   async componentDidMount() {
@@ -47,7 +54,8 @@ class App extends React.Component {
   async fetchDateJSON() {
     this.setState({ isDataLoaded: false });
     const calType = localStorage.getItem("isGregorian") === "true" ? "gregorian" : "julian";
-    const fetchURL = "https://orthocal.info/api/" + calType + "/" + this.selectedDate.getFullYear() + "/" + (this.selectedDate.getMonth() + 1) + "/" + this.selectedDate.getDate();
+    const traditionType = localStorage.getItem("isSlavic") === "true" ? "slavic" : "greek";
+    const fetchURL = "https://orthocal.info/api/" + traditionType + "/" + calType + "/" + this.selectedDate.getFullYear() + "/" + (this.selectedDate.getMonth() + 1) + "/" + this.selectedDate.getDate();
 
     await fetch(fetchURL)
     .then((res) => res.json())
