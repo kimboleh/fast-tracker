@@ -1,0 +1,33 @@
+@use "../utilities/_variables.scss" as *;
+
+.segmented-toggle {
+  display: inline-flex;
+  border-radius: 8px;
+  background: hsla(0, 0%, 0%, 0.06);
+  padding: 3px;
+  width: 100%;
+  box-sizing: border-box;
+
+  button {
+    flex: 1;
+    border: none;
+    background: none;
+    padding: 8px 12px;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #555;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+    &.selected {
+      background: $blue; // or $green — pick whichever reads as "active" against your palette
+      color: #FFF;
+    }
+
+    &:hover:not(.selected) {
+      background: hsla(0, 0%, 0%, 0.04);
+    }
+  }
+}
