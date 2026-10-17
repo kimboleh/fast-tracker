@@ -11,7 +11,7 @@ export class About extends React.Component {
                 <h1>About</h1>
             </div>
             <div id="about-text">
-                <p>Meat & Right is a simple webpage for displaying daily fasting requirements according to the Orthodox Church of America (OCA) calendar. 
+                <p>Meat & Right is a simple webpage for displaying daily fasting requirements according to the Slavic (OCA, ROCOR) and Greek (GOARCH, Antiochian) traditions. 
                 Its goal is to provide a quick way to check fasts, as well as provide a way to plan ahead for future fasts, without having to navigate 
                 a myriad of other sources to check the fasting requirements of the day.</p>
 

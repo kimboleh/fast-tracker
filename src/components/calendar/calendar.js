@@ -16,17 +16,21 @@ const Calendar = () => {
     const [events, setEvents] = useState([]); // Store API data
 
     const currentMonth = month;
+    const calType = localStorage.getItem("isGregorian") === "true" ? "gregorian" : "julian";
+    const traditionType = localStorage.getItem("isSlavic") === "true" ? "slavic" : "greek";
+    const fetchURL = "https://orthocal.info/api/" + traditionType + "/" + calType + "/" + year + "/" + (month + 1);
 
     const months = ["January", "February", "March", "April", "May", "June", "July",
         "August", "September", "October", "November", "December"];
 
+    // Fetch new data when month, year, calendar, or tradition changes
     useEffect(() => {
         fetchData();
-    }, [month, year]); // Fetch new data when month or year changes
+    }, [month, year, calType, traditionType]);
 
     const fetchData = async () => {
         try {
-            const response = await fetch(`https://orthocal.info/api/gregorian/${year}/${month + 1}`);
+            const response = await fetch(fetchURL);
             const data = await response.json();
             setEvents(data); // Store the API response
         } catch (error) {

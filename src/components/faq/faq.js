@@ -93,7 +93,7 @@ export class FAQ extends React.Component {
                     <summary>Are these fasting details up-to-date?</summary>
                     <div className='answer'>
                         Yes! The data is all taken from the <a href="https://orthocal.info/">orthocal.info</a> API, and it is 
-                        accurate to the official OCA calendar. No matter what part of the world you're in, the current date and time on 
+                        accurate to the traditional Slavic (OCA, ROCOR) and Greek (GOARCH, Antiochian) calendars. No matter what part of the world you're in, the current date and time on 
                         your device is what determines the date you are shown, so this website will work even if you've changed time zones.
                     </div>
                 </details>
