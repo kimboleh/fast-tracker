@@ -21,23 +21,21 @@ export class Sidebar extends React.Component {
     this.toggleMenu = this.toggleMenu.bind(this);
     this.toggleSettings = this.toggleSettings.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
-    this.closeSettings = this.closeSettings.bind(this);
     this.handleLinkClick = this.handleLinkClick.bind(this);
     this.handleCalendarToggle = this.handleCalendarToggle.bind(this);
     this.handleTraditionToggle = this.handleTraditionToggle.bind(this);
   }
 
-  toggleMenu() { this.setState(prevState => ({ isMenuOpen: !prevState.isMenuOpen })); }
-
-  toggleSettings() {
+  toggleMenu() {
     this.setState(prev => ({
-      isSettingsOpen: !prev.isSettingsOpen,
-      isMenuOpen: false
+      isMenuOpen: !prev.isMenuOpen,
+      isSettingsOpen: false // collapsing the menu also collapses settings
     }));
   }
 
-  closeMenu() { this.setState({ isMenuOpen: false }); }
-  closeSettings() { this.setState({ isSettingsOpen: false }); }
+  toggleSettings() { this.setState(prev => ({ isSettingsOpen: !prev.isSettingsOpen })); }
+
+  closeMenu() { this.setState({ isMenuOpen: false, isSettingsOpen: false }); }
 
   // wrap link clicks so the menu auto-closes on mobile after navigating
   handleLinkClick(handler) {
@@ -66,7 +64,7 @@ export class Sidebar extends React.Component {
         <div id="sidebar" className={'light' + (isMenuOpen ? ' menu-open' : '')}>
             <div id="site-title">Meat<img src={meat} id="meat-logo" alt="logo - icon of a porkchop"/><br/>& Right</div>
             <h1 aria-label="Meat and Right" className="hidden">Meat and Right</h1>
-            <h2>An OCA Fasting Tracker</h2>
+            <h2>An Orthodox Fasting Tracker</h2>
             <hr/>
 
             <button
@@ -99,10 +97,9 @@ export class Sidebar extends React.Component {
                   onCalendarToggle={this.handleCalendarToggle}
                   onTraditionToggle={this.handleTraditionToggle}
                 />
-
-                {(this.state.isMenuOpen || this.state.isSettingsOpen) &&
-                  <div className="sidebar-overlay" onClick={() => { this.closeMenu(); this.closeSettings(); }}></div>}
             </div>
+
+            {isMenuOpen && <div className="sidebar-overlay" onClick={this.closeMenu}></div>}
         </div>
     );
   }

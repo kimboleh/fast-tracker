@@ -218,8 +218,20 @@ div.sidebar-link:hover {
   }
 
   #settingsToggle {
-    position: relative;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    gap: 12px;
+    position: static;
+    width: 100%;
+    height: auto;
+    font-size: clamp(1rem, 2.8vw, 1.375rem);
+    color: #444;
+  }
+
+  #settings-panel {
+    position: static;   // expands inline inside the #links dropdown
+    width: 100%;
+    box-shadow: none;
+    border-top: 1px solid hsla(0, 0%, 0%, 0.08);
   }
 }

@@ -1,19 +1,28 @@
 @use "../utilities/_variables.scss" as *;
 
 #settings-panel {
-  display: none;
   position: absolute;
-  background-color: $white; // needs its own — it floats over content, same reasoning as #links
-  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
-  z-index: 20; // above #links (15), since we don't want them fighting if both toggle quickly
-
-  // desktop: anchored bottom-left of the fixed sidebar
-  left: 0;
+  left: 30px;
   bottom: 60px;
   width: 280px;
+  background-color: $white;
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
+  z-index: 20;
+
+  // closed state
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.9);
+  transform-origin: bottom left; // grows out of the gear
+
+  // visibility waits until the fade finishes before hiding
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
 
   &.open {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition-delay: 0s;
   }
 }
 
