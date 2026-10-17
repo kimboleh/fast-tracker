@@ -27,6 +27,9 @@
 }
 
 .settings-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 12px 16px;
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.08);
 
@@ -37,6 +40,64 @@
   h3 {
     font-size: 1rem;
     font-weight: 500;
-    margin: 0 0 8px 0;
+    margin: 0;
+  }
+
+  .title-with-info { 
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    .more-info {
+      height: 15px;
+      width: 15px;
+    }
+  }
+
+  .info-trigger {
+    position: relative;
+    padding: 8px;
+    margin: -8px;
+    cursor: help;
+  }
+
+  .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translateY(-60%);
+
+    width: 200px;
+    background-color: $white;
+    box-shadow: 0 0 6px 0 hsla(0, 0%, 0%, 0.4);
+    color: $black;
+    padding: 15px;
+    z-index: 1;
+
+    p { 
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  .info-trigger:hover .tooltip,
+  .info-trigger:focus-within .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .settings-section {
+    .tooltip {
+      left: 0;
+      transform: translateY(-5%) translateX(-40%);
+    }
   }
 }

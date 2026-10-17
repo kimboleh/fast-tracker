@@ -6,6 +6,7 @@ Meat & Right is a tool for Eastern Orthodox Christians to check what the typical
 
 ### 1.2.0 - October 17, 2026 (Latest)
 - Added the ability to toggle between Slavic (OCA, ROCOR) and Greek (GOARCH, Antiochian) traditional fasts!
+- Added tooltip to explain the scope of "Slavic" and "Greek"
 - Placed toggles into a settings menu for better organization
 - [Fix] Calendar view now refreshes when tradition or calendar toggles are switched
 
