@@ -1,0 +1,33 @@
+@use "../utilities/_variables.scss" as *;
+
+#settings-panel {
+  display: none;
+  position: absolute;
+  background-color: $white; // needs its own — it floats over content, same reasoning as #links
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
+  z-index: 20; // above #links (15), since we don't want them fighting if both toggle quickly
+
+  // desktop: anchored bottom-left of the fixed sidebar
+  left: 0;
+  bottom: 60px;
+  width: 280px;
+
+  &.open {
+    display: block;
+  }
+}
+
+.settings-section {
+  padding: 12px 16px;
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.08);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 0 8px 0;
+  }
+}
